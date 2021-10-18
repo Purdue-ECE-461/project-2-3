@@ -1,0 +1,1039 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/through2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/rvagg/through2 HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/babel-core HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/babel/babel HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Microsoft/TypeScript HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nodeca/js-yaml HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ljharb/qs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack/loader-utils HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/npm/security-holder HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack-contrib/extract-text-webpack-plugin HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/markedjs/marke HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/through2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/rvagg/through2 HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/babel-core HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/babel/babel HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Microsoft/TypeScript HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nodeca/js-yaml HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ljharb/qs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack/loader-utils HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/npm/security-holder HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack-contrib/extract-text-webpack-plugin HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/markedjs/marke HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/through2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/rvagg/through2 HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/babel-core HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/babel/babel HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Microsoft/TypeScript HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nodeca/js-yaml HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ljharb/qs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack/loader-utils HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/npm/security-holder HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack-contrib/extract-text-webpack-plugin HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/markedjs/marke HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/through2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/rvagg/through2 HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/babel-core HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/babel/babel HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Microsoft/TypeScript HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nodeca/js-yaml HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ljharb/qs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack/loader-utils HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/npm/security-holder HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack-contrib/extract-text-webpack-plugin HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/markedjs/marke HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/through2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/rvagg/through2 HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/babel-core HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/babel/babel HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Microsoft/TypeScript HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nodeca/js-yaml HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ljharb/qs HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack/loader-utils HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/npm/security-holder HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/webpack-contrib/extract-text-webpack-plugin HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/markedjs/marke HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/test, universal_newlines=True, shell=None, istream=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/test, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/cloudinary/cloudinary_npm.git
+INFO:root:Repo parsed, found 2259 total comments.
+INFO:root:10.85% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 258 lines
+INFO:root:Found 20 headers, 27 images, and 40 other markdown features in the readme.
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 401 80
+WARNING:root:Github source not found, moving on...
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/cloudinary/cloudinary_npm.git
+INFO:root:Repo parsed, found 2259 total comments.
+INFO:root:10.85% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 258 lines
+INFO:root:Found 20 headers, 27 images, and 40 other markdown features in the readme.
+WARNING:root:Something went wrong
+WARNING:root:Error: string index out of range
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/cloudinary/cloudinary_npm.git
+INFO:root:Repo parsed, found 2259 total comments.
+INFO:root:10.85% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 258 lines
+INFO:root:Found 20 headers, 27 images, and 40 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/expressjs/express.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/expressjs/express.git
+INFO:root:Repo parsed, found 2256 total comments.
+INFO:root:10.94% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 158 lines
+INFO:root:Found 11 headers, 1 images, and 32 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/nullivex/nodist.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/nullivex/nodist.git
+INFO:root:Repo parsed, found 368 total comments.
+INFO:root:16.04% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 493 lines
+INFO:root:Found 47 headers, 0 images, and 198 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/lodash/lodash.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/lodash/lodash.git
+INFO:root:Repo parsed, found 5863 total comments.
+INFO:root:16.68% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 80 lines
+INFO:root:Found 5 headers, 0 images, and 18 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/browserify/browserify.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/browserify/browserify.git
+INFO:root:Repo parsed, found 130 total comments.
+INFO:root:1.99% of all lines were comments
+INFO:root:Looking for README
+WARNING:root:No readme.md or README.md file found, scoring 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/yeoman/generator.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/yeoman/generator.git
+INFO:root:Repo parsed, found 749 total comments.
+INFO:root:9.27% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 128 lines
+INFO:root:Found 6 headers, 1 images, and 1 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/shelljs/shelljs.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/shelljs/shelljs.git
+INFO:root:Repo parsed, found 1493 total comments.
+INFO:root:14.01% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 876 lines
+INFO:root:Found 64 headers, 0 images, and 163 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/motdotla/dotenv.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/motdotla/dotenv.git
+INFO:root:Repo parsed, found 111 total comments.
+INFO:root:10.22% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 280 lines
+INFO:root:Found 25 headers, 1 images, and 56 other markdown features in the readme.
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/cloudinary/cloudinary_npm.git
+INFO:root:Repo parsed, found 2259 total comments.
+INFO:root:10.85% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 258 lines
+INFO:root:Found 20 headers, 27 images, and 40 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/expressjs/express.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/expressjs/express.git
+INFO:root:Repo parsed, found 2256 total comments.
+INFO:root:10.94% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 158 lines
+INFO:root:Found 11 headers, 1 images, and 32 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/nullivex/nodist.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/nullivex/nodist.git
+INFO:root:Repo parsed, found 368 total comments.
+INFO:root:16.04% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 493 lines
+INFO:root:Found 47 headers, 0 images, and 198 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/lodash/lodash.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/lodash/lodash.git
+INFO:root:Repo parsed, found 5863 total comments.
+INFO:root:16.68% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 80 lines
+INFO:root:Found 5 headers, 0 images, and 18 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/browserify/browserify.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/browserify/browserify.git
+INFO:root:Repo parsed, found 130 total comments.
+INFO:root:1.99% of all lines were comments
+INFO:root:Looking for README
+WARNING:root:No readme.md or README.md file found, scoring 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/yeoman/generator.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/yeoman/generator.git
+INFO:root:Repo parsed, found 749 total comments.
+INFO:root:9.27% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 128 lines
+INFO:root:Found 6 headers, 1 images, and 1 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/shelljs/shelljs.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/shelljs/shelljs.git
+INFO:root:Repo parsed, found 1493 total comments.
+INFO:root:14.01% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 876 lines
+INFO:root:Found 64 headers, 0 images, and 163 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/motdotla/dotenv.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', './temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', './temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/motdotla/dotenv.git
+INFO:root:Repo parsed, found 111 total comments.
+INFO:root:10.22% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 280 lines
+INFO:root:Found 25 headers, 1 images, and 56 other markdown features in the readme.
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/cloudinary/cloudinary_npm.git
+INFO:root:Repo parsed, found 2259 total comments.
+INFO:root:10.85% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 258 lines
+INFO:root:Found 20 headers, 27 images, and 40 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/expressjs/express.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/expressjs/express.git
+INFO:root:Repo parsed, found 2256 total comments.
+INFO:root:10.94% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 158 lines
+INFO:root:Found 11 headers, 1 images, and 32 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/nullivex/nodist.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/nullivex/nodist.git
+INFO:root:Repo parsed, found 368 total comments.
+INFO:root:16.04% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 493 lines
+INFO:root:Found 47 headers, 0 images, and 198 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/lodash/lodash.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/lodash/lodash.git
+INFO:root:Repo parsed, found 5863 total comments.
+INFO:root:16.68% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 80 lines
+INFO:root:Found 5 headers, 0 images, and 18 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/browserify/browserify.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/browserify/browserify.git
+INFO:root:Repo parsed, found 130 total comments.
+INFO:root:1.99% of all lines were comments
+INFO:root:Looking for README
+WARNING:root:No readme.md or README.md file found, scoring 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/yeoman/generator.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/yeoman/generator.git
+INFO:root:Repo parsed, found 749 total comments.
+INFO:root:9.27% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 128 lines
+INFO:root:Found 6 headers, 1 images, and 1 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/shelljs/shelljs.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/shelljs/shelljs.git
+INFO:root:Repo parsed, found 1493 total comments.
+INFO:root:14.01% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 876 lines
+INFO:root:Found 64 headers, 0 images, and 163 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/motdotla/dotenv.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/motdotla/dotenv.git
+INFO:root:Repo parsed, found 111 total comments.
+INFO:root:10.22% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 280 lines
+INFO:root:Found 25 headers, 1 images, and 56 other markdown features in the readme.
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/contributors?per_page=100 HTTP/1.1" 200 None
+WARNING:root:No license
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/cloudinary/cloudinary_npm/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/cloudinary/cloudinary_npm.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/cloudinary/cloudinary_npm.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/cloudinary/cloudinary_npm.git
+INFO:root:Repo parsed, found 2259 total comments.
+INFO:root:10.85% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 258 lines
+INFO:root:Found 20 headers, 27 images, and 40 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/expressjs/express/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/expressjs/express.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/expressjs/express.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/expressjs/express.git
+INFO:root:Repo parsed, found 2256 total comments.
+INFO:root:10.94% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 158 lines
+INFO:root:Found 11 headers, 1 images, and 32 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nullivex/nodist/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/nullivex/nodist.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/nullivex/nodist.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/nullivex/nodist.git
+INFO:root:Repo parsed, found 368 total comments.
+INFO:root:16.04% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 493 lines
+INFO:root:Found 47 headers, 0 images, and 198 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/lodash/lodash/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/lodash/lodash.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/lodash/lodash.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/lodash/lodash.git
+INFO:root:Repo parsed, found 5863 total comments.
+INFO:root:16.68% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 80 lines
+INFO:root:Found 5 headers, 0 images, and 18 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/browserify/browserify/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/browserify/browserify.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/browserify/browserify.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/browserify/browserify.git
+INFO:root:Repo parsed, found 130 total comments.
+INFO:root:1.99% of all lines were comments
+INFO:root:Looking for README
+WARNING:root:No readme.md or README.md file found, scoring 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.npms.io:443
+DEBUG:urllib3.connectionpool:https://api.npms.io:443 "GET /v2/package/yeoman-generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yeoman/generator/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/yeoman/generator.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/yeoman/generator.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/yeoman/generator.git
+INFO:root:Repo parsed, found 749 total comments.
+INFO:root:9.27% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 128 lines
+INFO:root:Found 6 headers, 1 images, and 1 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/shelljs/shelljs/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/shelljs/shelljs.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/shelljs/shelljs.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/shelljs/shelljs.git
+INFO:root:Repo parsed, found 1493 total comments.
+INFO:root:14.01% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 876 lines
+INFO:root:Found 64 headers, 0 images, and 163 other markdown features in the readme.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/contributors?per_page=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/motdotla/dotenv/issues HTTP/1.1" 200 None
+INFO:root:Cloning repo: https://github.com/motdotla/dotenv.git...
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'], cwd=/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2, universal_newlines=True, shell=None, istream=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://github.com/motdotla/dotenv.git', '/mnt/d/Dan/University/3rd year/ECE 461/Proj 1/project-1-project-1-2/src/./temp'])'s unused stdout: 
+INFO:root:Repo downloaded successfully: https://github.com/motdotla/dotenv.git
+INFO:root:Repo parsed, found 111 total comments.
+INFO:root:10.22% of all lines were comments
+INFO:root:Looking for README
+INFO:root:README found
+INFO:root:Readme length is 280 lines
+INFO:root:Found 25 headers, 1 images, and 56 other markdown features in the readme.
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...
+WARNING:root:Invalid URL
+WARNING:root:Github source not found, moving on...

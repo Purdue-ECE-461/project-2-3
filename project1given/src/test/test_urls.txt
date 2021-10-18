@@ -1,0 +1,12 @@
+https://github.com/cloudinary/cloudinary_npm
+https://www.npmjs.com/package/express
+https://github.com/nullivex/nodist
+https://github.com/lodash/lodash
+https://www.npmjs.com/package/browserify
+https://www.npmjs.org/package/yeoman-generator
+https://github.com/shelljs/shelljs
+https://github.com/motdotla/dotenv
+https://api.github.com/repos/jgthms/bulma
+https://api.github.com/repos/shockie/node-iniparser
+https://www.youtube.com/
+https://piazza.com/
