@@ -24,5 +24,5 @@ jobs:
         LOG_FILE: project1given/log_file.log
       run: |
         chmod +x project1given/run
-        project1given/install
+        project1given/run install
         pylint `ls -R|grep .py$|xargs`
