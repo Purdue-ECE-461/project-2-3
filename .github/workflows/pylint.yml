@@ -18,6 +18,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LOG_LEVEL: 1
+        LOG_FILE: project1given/log_file.log
       run: |
-        project1given/run install
+        chmod +x project1given/run
+        project1given/install
         pylint `ls -R|grep .py$|xargs`
