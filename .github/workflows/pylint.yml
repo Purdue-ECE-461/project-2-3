@@ -26,5 +26,5 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        cd project1given
-        pylint `ls -R|grep .py$|xargs`
+        ./run url_sample.txt
+        
