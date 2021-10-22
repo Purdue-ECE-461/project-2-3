@@ -26,5 +26,7 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
+        cd project1given
+        chmod +x ./run
         ./run url_sample.txt
         
