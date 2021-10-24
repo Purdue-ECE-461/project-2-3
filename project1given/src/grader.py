@@ -19,12 +19,11 @@ def main():
     if len(sys.argv) == 2:
         url_file_path = sys.argv[1]
 
-        log_file = str(os.environ["LOG_FILE"])
+        log_file = "./src/LOG_FILE.log"
         logging.basicConfig(filename = log_file, level=0)
         with open(url_file_path, 'r') as url_file:
             urls = url_file.read().splitlines()
-
-        TOKEN = str(os.environ.get('GITHUB_TOKEN'))
+        TOKEN = "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"
         print('URL NET_SCORE RAMP_UP_SCORE CORRECTNESS_SCORE BUS_FACTOR_SCORE RESPONSIVE_MAINTAINER_SCORE LICENSE_SCORE')
         final = []
         for url in urls:

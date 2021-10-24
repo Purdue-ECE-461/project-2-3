@@ -54,7 +54,7 @@ compatible_license = {
                         "eCos-2.0": True,
                         "Apache-2.0": True
                     }
-TOKEN = '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'
+TOKEN = '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'
 
 # URL INFO TESTS
 def testGoodGit():

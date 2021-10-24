@@ -1,12 +1,10 @@
-#! /usr/bin/bash
-# in file `run`
-
 if [[ "$1" == "install" ]]; 
 then
   python3 -m venv venv
   echo "Created Virtual Environment"
   
   source venv/bin/activate
+  python -c 'import os; os.environ["LOG_FILE"]="./src/LOG_FILE.log"; os.environ["GITHUB_TOKEN"]="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"'
   if [[ -f "requirements.txt" ]];
   then
     echo "Installing Dependencies"
@@ -34,13 +32,11 @@ then
   source venv/bin/activate
   #run test script
   echo "running test script"
-
   pytest -q --json-report --json-report-summary --json-report-file src/test/report.json src/test/test.py
   coverage run src/test/test_coverage.py src/test/test_urls.txt
   coverage json
   python3 src/test/parse_report.py coverage.json src/test/report.json 
  
   deactivate
-
 fi
 
