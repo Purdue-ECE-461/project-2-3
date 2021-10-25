@@ -25,4 +25,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        find . \( -name venv -prune \) -o \( -name google-cloud-sdk -prune \) -o -name "*.py" -print | xargs pylint >> pylintOut.txt
+        find . \( -name venv -prune \) -o \( -name google-cloud-sdk -prune \) -o -name "*.py" -print | xargs pylint | echo >> pylintOut.txt
