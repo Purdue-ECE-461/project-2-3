@@ -19,14 +19,10 @@ jobs:
         LOG_LEVEL: 1
         LOG_FILE: log_file.log
       run: |
-        cd project1given
         chmod +x ./run
         ./run install
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        cd project1given
-        chmod +x ./run
-        ./run url_sample.txt
-        
+        find . \( -name venv -prune \) -o -name "*.py" -print | xargs pylint
