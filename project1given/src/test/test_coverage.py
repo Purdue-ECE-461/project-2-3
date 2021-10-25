@@ -22,7 +22,7 @@ def score_stdout(scores):
 if len(sys.argv) == 2:
     url_file_path = sys.argv[1]
 
-    log_file = "./src/test/LOG_FILE.log"
+    log_file = str(os.environ.get('LOG_FILE'))
     logging.basicConfig(filename = log_file, level=0)
     with open(url_file_path, 'r') as url_file:
         urls = url_file.read().splitlines()

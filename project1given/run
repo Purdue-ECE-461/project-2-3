@@ -4,13 +4,10 @@ then
   echo "Created Virtual Environment"
   
   source venv/bin/activate
-  python -c 'import os; os.environ["LOG_FILE"]="./src/LOG_FILE.log"; os.environ["GITHUB_TOKEN"]="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"'
   if [[ -f "requirements.txt" ]];
   then
     echo "Installing Dependencies"
     venv/bin/pip install -r requirements.txt
-    #pip3 install -r requirments.txt
-
     echo "Dependencies Installed"
     deactivate
   else
@@ -21,7 +18,8 @@ elif [[ "$1" == *.txt ]];
 then
   #run python grading script
   source venv/bin/activate
-
+  export LOG_FILE="./src/LOG_FILE.log"
+  export GITHUB_TOKEN="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"
   echo "running grading script"
   python3 src/grader.py "$1"
 
@@ -31,6 +29,8 @@ elif [[ "$1" == "test" ]];
 then
   source venv/bin/activate
   #run test script
+  export LOG_FILE="./src/LOG_FILE.log"
+  export GITHUB_TOKEN="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"
   echo "running test script"
   pytest -q --json-report --json-report-summary --json-report-file src/test/report.json src/test/test.py
   coverage run src/test/test_coverage.py src/test/test_urls.txt
@@ -39,4 +39,3 @@ then
  
   deactivate
 fi
-
