@@ -51,6 +51,9 @@ jobs:
         cluster_name: ${{ env.GKE_CLUSTER }}
         location: ${{ env.GKE_ZONE }}
         credentials: ${{ secrets.GKE_SA_KEY }}
+    # The KUBECONFIG env var is automatically exported and picked up by kubectl.
+    - id: get-pods
+      run: kubectl get pods
 
     # Build the Docker image
     - name: Build
