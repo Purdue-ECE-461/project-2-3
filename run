@@ -16,7 +16,7 @@ then
   venv/bin/pip install --upgrade google-cloud-storage
   venv/bin/pip install google-cloud-container
   venv/bin/pip install pylint
-  venv/bin/pip freeze >> requirements.txt
+  venv/bin/pip freeze > requirements.txt
 
   echo "Dependencies Installed"
   deactivate
