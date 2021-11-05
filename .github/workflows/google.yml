@@ -44,9 +44,7 @@ jobs:
     # helper for authentication
     - run: |-
         gcloud --quiet auth configure-docker
-    # The KUBECONFIG env var is automatically exported and picked up by kubectl.
-    - id: get-pods
-      run: kubectl get pods
+
     # Get the GKE credentials so we can deploy to the cluster
     - uses: google-github-actions/get-gke-credentials@v0.2.1
       with:
