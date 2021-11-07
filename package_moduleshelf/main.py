@@ -47,8 +47,8 @@ def upload_image_file(img):
 app = Flask(__name__)
 app.config.update(
     SECRET_KEY='secret',
-    MAX_CONTENT_LENGTH=sys.maxint,
-    ALLOWED_EXTENSIONS=set(['zip'])
+    MAX_CONTENT_LENGTH=8 * 1024 * 1024,
+    ALLOWED_EXTENSIONS=set(['png', 'jpg', 'jpeg', 'gif'])
 )
 
 app.debug = False
@@ -64,7 +64,7 @@ if not app.testing:
 
 @app.route('/')
 def list():
-    start_after = request.args.get('start_after', default=u'1')
+    start_after = request.args.get('start_after', default=1)
     package_modules, last_name = firestore.next_page(start_after=start_after)
 
     return render_template('list.html', package_modules=package_modules, last_name=last_name)
