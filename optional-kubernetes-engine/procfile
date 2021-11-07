@@ -1,0 +1,2 @@
+package_moduleshelf: gunicorn -b 0.0.0.0:$PORT main:app
+worker: psqworker main.package_modules_queue
