@@ -30,24 +30,26 @@
   Add package_module
 </a>
 
-{% for package_module in (package_module for package_module in package_modules if package_module.name != '1') %}
-  <div class="media">
-    <a href="/package_modules/{{package_module.id}}">
-      <div class="media-left">
-        {% if package_module.imageUrl %}
-          <img src="{{package_module.imageUrl}}">
+{% for package_module in package_modules %}
+  {% if package_module.name != '1' %}
+    <div class="media">
+      <a href="/package_modules/{{package_module.id}}">
+        <div class="media-left">
+          {% if package_module.imageUrl %}
+            <img src="{{package_module.imageUrl}}">
           {% else %}
-          <img src="https://placekitten.com/g/128/192">
-        {% endif %}
-      </div>
-      <div class="media-body">
-        <h4>{{package_module.name}}</h4>
-        <p>{{package_module.user}}</p>
-      </div>
-    </a>
-  </div>
+            <img src="https://placekitten.com/g/128/192">
+          {% endif %}
+        </div>
+        <div class="media-body">
+          <h4>{{package_module.name}}</h4>
+          <p>{{package_module.user}}</p>
+        </div>
+      </a>
+    </div>
+  {% endif %}
 {% else %}
-<p>No package_modules found</p>
+  <p>No package_modules found</p>
 {% endfor %}
 
 {% if last_name %}
