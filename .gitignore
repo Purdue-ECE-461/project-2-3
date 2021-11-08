@@ -42,3 +42,4 @@ lib/
 __pycache__
 google-cloud-sdk/
 venv/
+*.tar.*
