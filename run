@@ -35,5 +35,5 @@ elif [[ "$1" == "clean" ]];
 then
   rm -rf venv
   rm -rf google-cloud-sdk
-  rm -rf *.tar.*
+  rm -rf google-cloud-sdk-*.tar.*
 fi
