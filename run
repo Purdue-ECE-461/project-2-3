@@ -8,8 +8,8 @@ then
   echo "Installing Dependencies"
   venv/bin/pip install --upgrade pip
   venv/bin/pip install -r requirements.txt
-  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-361.0.0-linux-x86_64.tar.gz
-  tar -xf google-cloud-sdk-361.0.0-linux-x86_64.tar.gz
+  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-363.0.0-linux-x86_64.tar.gz
+  tar -xf google-cloud-sdk-363.0.0-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q
   ./google-cloud-sdk/bin/gcloud config set compute/zone us-east1-c
   
@@ -31,4 +31,9 @@ then
   source venv/bin/activate
   ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1
   deactivate
+elif [[ "$1" == "clean" ]];
+then
+  rm -rf venv
+  rm -rf google-cloud-sdk
+  rm -rf *.tar.*
 fi
