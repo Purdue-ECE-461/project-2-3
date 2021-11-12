@@ -30,7 +30,7 @@ elif [[ "$1" == "deploy" ]];
 then
   source venv/bin/activate
   ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1
-  ./google-cloud-sdk/bin/gcloud app logs read
+  ./google-cloud-sdk/bin/gcloud app logs read --limit=15 > deployLog.txt
   deactivate
 elif [[ "$1" == "clean" ]];
 then
