@@ -47,7 +47,7 @@ def upload_image_file(img):
 app = Flask(__name__)
 app.config.update(
     SECRET_KEY='secret',
-    MAX_CONTENT_LENGTH=sys.maxint,
+    MAX_CONTENT_LENGTH=1000000,
     ALLOWED_EXTENSIONS=set(['zip'])
 )
 
