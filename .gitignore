@@ -43,3 +43,5 @@ __pycache__
 google-cloud-sdk/
 venv/
 *.tar.*
+date.txt
+deployLog*

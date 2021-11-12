@@ -30,10 +30,18 @@ elif [[ "$1" == "deploy" ]];
 then
   source venv/bin/activate
   ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1
-  ./google-cloud-sdk/bin/gcloud app logs read --limit=15 > deployLog.txt
+  bash -c "TZ=UTC date +'/%Y-%m-%d %H:%M:/,\$p' > date.txt"
+  ./google-cloud-sdk/bin/gcloud app logs read --limit=100 > deployLog.txt
+  sed -f date.txt -n deployLog.txt > deployLogRecent.txt
   deactivate
+elif [[ "$1" == "deployLog" ]];
+then
+  ./google-cloud-sdk/bin/gcloud app logs read --limit=100 > deployLog.txt
+  sed -f date.txt -n deployLog.txt > deployLogRecent.txt
 elif [[ "$1" == "clean" ]];
 then
+  rm date.txt
+  rm deployLog*
   rm -rf venv
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*

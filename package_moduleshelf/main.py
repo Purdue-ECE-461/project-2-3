@@ -48,7 +48,8 @@ app = Flask(__name__)
 app.config.update(
     SECRET_KEY='secret',
     MAX_CONTENT_LENGTH=1000000,
-    ALLOWED_EXTENSIONS=set(['zip'])
+    ALLOWED_EXTENSIONS=set(['zip']),
+    CLOUD_STORAGE_BUCKET = 'ece461-p2-t3-files'
 )
 
 app.debug = False
