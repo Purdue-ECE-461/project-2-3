@@ -8,12 +8,13 @@ then
   echo "Installing Dependencies"
   venv/bin/pip install --upgrade pip
   venv/bin/pip install -r requirements.txt
-  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-363.0.0-linux-x86_64.tar.gz
-  tar -xf google-cloud-sdk-363.0.0-linux-x86_64.tar.gz
+  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
+  tar -xf google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q
   ./google-cloud-sdk/bin/gcloud config set compute/zone us-east1-c
   
   ./google-cloud-sdk/bin/gcloud init
+  ./google-cloud-sdk/bin/gcloud components update
   venv/bin/pip install --upgrade google-cloud-storage
   venv/bin/pip install google-cloud-container
   venv/bin/pip install pylint
