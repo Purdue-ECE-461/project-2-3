@@ -39,9 +39,9 @@ def main():
         output_json(final,"")
 
         #Check for ingestible score
-        if(final >= 0.5):
-            storage.upload_file(repo, "acceptable repository", URL_info) #temporary place holder until directory can be connected
-            print("ingested repo")
+        #if(final >= 0.5):
+        #    storage.upload_file(repo, "acceptable repository", URL_info) #temporary place holder until directory can be connected
+        #    print("ingested repo")
 
 
 if __name__ == '__main__':
