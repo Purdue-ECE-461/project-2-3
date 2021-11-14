@@ -5,6 +5,7 @@ from URL_info import URL_info
 from metrics import Metrics
 import logging
 import os
+from package_moduleshelf import storage
 
 def output_json(final, file_path):
     full_path  = file_path + 'LOG_FILE.json'
@@ -36,6 +37,11 @@ def main():
         final.sort(key=lambda d:d['Net Score'], reverse=True)
         score_stdout(final)
         output_json(final,"")
+
+        #Check for ingestible score
+        if(final >= 0.5):
+            storage.upload_file(repo, "acceptable repository", URL_info) #temporary place holder until directory can be connected
+            print("ingested repo")
 
 
 if __name__ == '__main__':
