@@ -1,4 +1,4 @@
-from flask_restful import Resource, request, reqparse
+import Flask-RESTful
 class Authenticate(Resource):
     import User
     import UserAuthenticationInfo

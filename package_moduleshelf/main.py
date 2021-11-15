@@ -21,7 +21,8 @@ from google.cloud import error_reporting
 import google.cloud.logging
 import storage
 
-from flask_restful import Resource, Api, request, reqparse
+import Flask-RESTful
+
 import pandas as pd
 import ast
 

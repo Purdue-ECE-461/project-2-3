@@ -7,7 +7,8 @@ then
   source venv/bin/activate
   echo "Installing Dependencies"
   venv/bin/pip install --upgrade pip
-  venv/bin/pip install -r requirements.txt --upgrade
+  venv/bin/pip install --no-cache-dir -r requirements.txt
+  venv/bin/pip install flask-restful
   curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
   tar -xf google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q
@@ -16,8 +17,8 @@ then
   ./google-cloud-sdk/bin/gcloud init
   ./google-cloud-sdk/bin/gcloud components update
   venv/bin/pip install --upgrade google-cloud-storage
-  venv/bin/pip install google-cloud-container
-  venv/bin/pip install pylint
+  venv/bin/pip install --upgrade google-cloud-container
+  venv/bin/pip install --upgrade pylint
   venv/bin/pip freeze > requirements.txt
 
   echo "Dependencies Installed"
@@ -30,8 +31,9 @@ then
 elif [[ "$1" == "deploy" ]];
 then
   source venv/bin/activate
-  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1
   bash -c "TZ=UTC date +'/%Y-%m-%d %H:%M:/,\$p' > date.txt"
+  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1
+  ./google-cloud-sdk/bin/gcloud endpoints services deploy ./package_moduleshelf/api.yaml
   ./google-cloud-sdk/bin/gcloud app logs read --limit=100 > deployLog.txt
   sed -f date.txt -n deployLog.txt > deployLogRecent.txt
   deactivate
