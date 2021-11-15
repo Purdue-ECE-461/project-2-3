@@ -1,0 +1,53 @@
+{#
+# Copyright 2015 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#}
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>package_module</h3>
+
+<div class="btn-group">
+  <a href="/package_modules/{{package_module.id}}/edit" class="btn btn-primary btn-sm">
+    <i class="glyphicon glyphicon-edit"></i>
+    Edit package_module
+  </a>
+  <a href="/package_modules/{{package_module.id}}/delete" class="btn btn-danger btn-sm">
+    <i class="glyphicon glyphicon-trash"></i>
+    Delete package_module
+  </a>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    {% if package_module.imageUrl %}
+      <img class="package_module-image" src="{{package_module.imageUrl}}">
+    {% else %}
+      <img class="package_module-image" src="https://placekitten.com/g/128/192">
+    {% endif %}
+  </div>
+  <div class="media-body">
+    <h4 class="package_module-name">
+      {{package_module.name}}
+      <small>{{package_module.publishedDate}}</small>
+    </h4>
+    <h5 class="package_module-user">By {{package_module.user|default('Unknown', True)}}</h5>
+    <p class="package_module-description">{{package_module.description}}</p>
+    <small class="package_module-added-by">Added by {{package_module.createdBy|default('Anonymous', True)}}</small>
+  </div>
+</div>
+
+{% endblock %}
