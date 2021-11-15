@@ -7,7 +7,7 @@ then
   source venv/bin/activate
   echo "Installing Dependencies"
   venv/bin/pip install --upgrade pip
-  venv/bin/pip install -r requirements.txt
+  venv/bin/pip install -r requirements.txt --upgrade
   curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
   tar -xf google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q

@@ -4,13 +4,15 @@ class Package(Resource):
     import PackageData
     import Error
     import firestore
-    data = new PackageData()
-    metadata = new MetaData()
+    import datetime
+    self.data = new PackageData()
+    self.metadata = new MetaData()
+    self.history = []
     
-    def get(self):
-        metadata = metadata.get_data()
-        data = data.get_data()
-        return {'MetaData': metadata, 'PackageData': data}, 200
+    def get(self): #PackageRetrieve
+        self.metadata = self.metadata.get_data()
+        self.data = self.data.get_data()
+        return {'MetaData': self.metadata, 'PackageData': self.data}, 200
     
     def post(self): #PackageCreate
         auth = None
@@ -23,21 +25,27 @@ class Package(Resource):
         parser.add_argument('data', required=True)
         args = parser.parse_args()  # parse arguments to dictionary
         
-        metadata = metadata.set_data(args['metadata'])
-        if(metadata == None):
+        self.metadata = self.metadata.set_data(args['metadata'])
+        if(self.metadata == None):
             e = new Error()
             return e.set("Package exists already.", 403)
-        if(metadata.Name == None || metadata.Version == None || metadata.get_ID() == None):
+        if(self.metadata.Name == None || self.metadata.Version == None || self.metadata.get_ID() == None):
             e = new Error()
             return e.set("Malformed request.", 400)
         
-        data = data.set_data(args['data'], metadata.get_ID())
-        if(data == None):
+        self.data = self.data.set_data(args['data'], self.metadata.get_ID())
+        if(self.data == None):
             e = new Error()
             return e.set("Package does not exist.", 403)
-        if(data.Content == None || data.JSPackage == None):
+        if(self.data.Content == None || self.data.JSPackage == None):
             e = new Error()
             return e.set("Malformed request.", 400)
         
-        return {'MetaData': metadata, 'PackageData': data}, 201
+        action = new PackageHistoryEntry()
+        action.Action = PackageHistoryEntry.Action.CREATE
+        action.PackageMetaData = self.metadata
+        action.Date = datetime.now()
+        self.history.append(action)
+        Packages.add_package(self)
+        return {'MetaData': self.metadata, 'PackageData': self.data}, 201
     

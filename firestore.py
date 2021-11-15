@@ -74,3 +74,11 @@ def delete(id):
     db = firestore.Client()
     package_module_ref = db.collection(u'package_module').document(id)
     package_module_ref.delete()
+
+def delete_all_package_modules():
+    while True:
+        package_modules, _ = self.next_page(limit=50)
+        if not package_modules:
+            break
+        for package_module in package_modules:
+            self.delete(package_module['id'])
