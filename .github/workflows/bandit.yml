@@ -29,4 +29,4 @@ jobs:
     - name: Analyzing code with Bandit
       run: |
         chmod +x ./run
-        find ./project-2-3 -name '*.py' -exec bandit -r {} \;
+        find ./project1given -name '*.py' -exec bandit -r {} \;
