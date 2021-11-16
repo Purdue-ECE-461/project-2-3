@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run:  printf "MYDIR=${GITHUB_WORKSPACE}/package_moduleshelf/app.yaml" | tee --append "$GITHUB_ENV"
-      - run:  ls ${{ env.MYDIR }}
+      - run:  echo ls ${{ env.MYDIR }}
       - name: deploy
         id: deploy
         uses: google-github-actions/deploy-appengine@main
