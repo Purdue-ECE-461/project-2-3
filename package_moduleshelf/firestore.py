@@ -55,15 +55,30 @@ def read(package_module_id):
 
 def update(data, package_module_id=None):
     db = firestore.Client()
+    if(firestore.read(package_module_id)==None):
+        return None
     package_module_ref = db.collection(u'package_module').document(package_module_id)
     package_module_ref.set(data)
     return document_to_dict(package_module_ref.get())
 
-
-create = update
+def create(data, package_module_id=None):
+    db = firestore.Client()
+    if(firestore.read(package_module_id)!=None):
+        return None
+    package_module_ref = db.collection(u'package_module').document(package_module_id)
+    package_module_ref.set(data)
+    return document_to_dict(package_module_ref.get())
 
 
 def delete(id):
     db = firestore.Client()
     package_module_ref = db.collection(u'package_module').document(id)
     package_module_ref.delete()
+
+def delete_all_package_modules():
+    while True:
+        package_modules, _ = self.next_page(limit=50)
+        if not package_modules:
+            break
+        for package_module in package_modules:
+            self.delete(package_module['id'])

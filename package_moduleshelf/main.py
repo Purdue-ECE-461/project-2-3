@@ -21,6 +21,18 @@ from google.cloud import error_reporting
 import google.cloud.logging
 import storage
 
+import Flask-RESTful
+
+from flask_restful_swagger import swagger
+
+import pandas as pd
+import ast
+
+import Packages
+import Reset
+import Package
+import PackageRating
+import Authenticate
 
 # [START upload_image_file]
 def upload_image_file(img):
@@ -54,6 +66,16 @@ app.config.update(
 
 app.debug = False
 app.testing = False
+
+api = swagger.docs(Api(app), apiVersion='1.0')
+api.add_resource(Packages, '/packages')
+api.add_resource(Reset, '/reset')
+api.add_resource(Packages.get_package_by_ID(id), '/package/{id}')
+api.add_resource(Package, '/package')
+api.add_resource(PackageRating.rate_by_ID(id), '/package/{id}/rate')
+api.add_resource(Authenticate, '/authenticate')
+api.add_resource(Packages.get_package_by_Name(Name), '/package/byName/{Name}')
+api.add_resource(Packages.delete_package_by_Name(Name), '/package/byName/{Name}')
 
 # Configure logging
 if not app.testing:

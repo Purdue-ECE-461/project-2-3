@@ -13,5 +13,5 @@
 # limitations under the License.
 
 # [START getting_started_app_yaml]
-runtime: python37
+runtime: python38
 # [END getting_started_app_yaml]
