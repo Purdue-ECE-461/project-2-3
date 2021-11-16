@@ -7,12 +7,6 @@ jobs:
     environment: production
 
     steps:
-      - name: setup
-        id: step1
-        run: |
-          echo "package_moduleshelf" >> $GITHUB_PATH
-          echo "package_moduleshelf/app.yaml" >> $GITHUB_PATH
-          
       - name: deploy
         id: deploy
         uses: google-github-actions/deploy-appengine@main
@@ -20,4 +14,4 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY }}
           project_id: ${{ secrets.PROJECT_ID }}
           version: v1
-          working_directory: ./package_moduleshelf
+          working_directory: $GITHUB_WORKSPACE/package_moduleshelf
