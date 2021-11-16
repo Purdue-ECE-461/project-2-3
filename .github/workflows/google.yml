@@ -7,6 +7,7 @@ jobs:
     environment: production
 
     steps:
+      - uses: actions/checkout@v1 
       - name: deploy
         id: deploy
         uses: google-github-actions/deploy-appengine@main
@@ -14,4 +15,4 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY }}
           project_id: ${{ secrets.PROJECT_ID }}
           version: v1
-          working_directory: $GITHUB_WORKSPACE/package_moduleshelf
+          working_directory: path.join(process.env.GITHUB_WORKSPACE, 'package_moduleshelf', 'app.yaml')
