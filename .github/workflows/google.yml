@@ -20,4 +20,4 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY }}
           project_id: ${{ secrets.PROJECT_ID }}
           version: v1
-          working_directory: package_moduleshelf
+          working_directory: ./package_moduleshelf
