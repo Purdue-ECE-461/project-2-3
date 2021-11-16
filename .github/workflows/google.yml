@@ -10,7 +10,7 @@ jobs:
       - name: setup
         id: step1
         run: |
-          echo "./package_moduleshelf" >> $GITHUB_PATH
+          echo "package_moduleshelf" >> $GITHUB_PATH
           
       - name: deploy
         id: deploy
@@ -19,4 +19,4 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY }}
           project_id: ${{ secrets.PROJECT_ID }}
           version: v1
-          deliverables: package_moduleshelf
+          deliverables: package_moduleshelf/app.yaml
