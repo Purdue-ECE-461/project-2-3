@@ -11,7 +11,7 @@ class Package(Resource):
     
     def get(self): #PackageRetrieve
         self.metadata = self.metadata.get_data()
-        self.data = self.data.get_data()
+        self.data = self.data.get_data(self.metadata.get_ID())
         return {'MetaData': self.metadata, 'PackageData': self.data}, 200
     
     def post(self): #PackageCreate
@@ -20,10 +20,10 @@ class Package(Resource):
         if(auth == None):
             e = new Error()
             return e.set("Malformed request.", 400)
-        parser = reqparse.RequestParser()  # initialize
-        parser.add_argument('metadata', required=True)  # add args
+        parser = reqparse.RequestParser()
+        parser.add_argument('metadata', required=True)
         parser.add_argument('data', required=True)
-        args = parser.parse_args()  # parse arguments to dictionary
+        args = parser.parse_args()
         
         self.metadata = self.metadata.set_data(args['metadata'])
         if(self.metadata == None):

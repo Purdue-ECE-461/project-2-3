@@ -23,6 +23,8 @@ import storage
 
 import Flask-RESTful
 
+from flask_restful_swagger import swagger
+
 import pandas as pd
 import ast
 
@@ -65,7 +67,7 @@ app.config.update(
 app.debug = False
 app.testing = False
 
-api = Api(app)
+api = swagger.docs(Api(app), apiVersion='1.0')
 api.add_resource(Packages, '/packages')
 api.add_resource(Reset, '/reset')
 api.add_resource(Packages.get_package_by_ID(id), '/package/{id}')

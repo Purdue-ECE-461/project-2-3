@@ -15,6 +15,7 @@ jobs:
         project_id: ${{ secrets.PROJECT_ID }}
         # An optional variables parameter can be used
         gae_variables: ${{ secrets.GAE_VARIABLES }}
+        gae_config_path: ./package_moduleshelf
         
     - name: Publish app to Google App Engine
       run: |-
