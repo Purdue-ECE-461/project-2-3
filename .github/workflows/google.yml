@@ -7,8 +7,7 @@ jobs:
     environment: production
 
     steps:
-      name: Deploy
-      - id: deploy
+      name: deploy
       uses: google-github-actions/deploy-appengine@main
       with:
         credentials: ${{ secrets.GCP_SA_KEY }}
