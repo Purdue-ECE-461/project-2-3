@@ -14,4 +14,3 @@ jobs:
         project_id: ${{ secrets.PROJECT_ID }}
         version: v1
         deliverables: package_moduleshelf/app.yaml
-      run: curl "${{ steps.deploy.outputs.url }}"
