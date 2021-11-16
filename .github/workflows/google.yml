@@ -5,9 +5,7 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     environment: production
-    defaults:
-      run:
-        working-directory: ./package_moduleshelf
+
     steps:
       - uses: actions/checkout@v2
       - name: deploy
@@ -17,3 +15,4 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY }}
           project_id: ${{ secrets.PROJECT_ID }}
           version: v1
+          deliverables: 'package_moduleshelf/app.yaml'
