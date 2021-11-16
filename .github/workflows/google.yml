@@ -7,7 +7,8 @@ jobs:
     environment: production
 
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
+      - run:  printf "MYDIR=${GITHUB_WORKSPACE}/package_moduleshelf/app.yaml" | tee --append "$GITHUB_ENV"
       - name: deploy
         id: deploy
         uses: google-github-actions/deploy-appengine@main
@@ -15,4 +16,4 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY }}
           project_id: ${{ secrets.PROJECT_ID }}
           version: v1
-          working_directory: ${{ join($GITHUB_WORKSPACE, 'package_moduleshelf', 'app.yaml') }}
+          working_directory: ${{ env.MYDIR }}
