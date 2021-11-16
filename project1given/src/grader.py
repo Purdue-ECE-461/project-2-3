@@ -42,6 +42,8 @@ def main():
         #if(final >= 0.5):
         #    storage.upload_file(repo, "acceptable repository", URL_info) #temporary place holder until directory can be connected
         #    print("ingested repo")
+        #else:
+        #   print("error: score less than 0.5")
 
 
 if __name__ == '__main__':
