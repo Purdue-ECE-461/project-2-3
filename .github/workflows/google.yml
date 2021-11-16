@@ -11,6 +11,7 @@ jobs:
         id: step1
         run: |
           echo "package_moduleshelf" >> $GITHUB_PATH
+          echo "package_moduleshelf/app.yaml" >> $GITHUB_PATH
           
       - name: deploy
         id: deploy
