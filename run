@@ -28,8 +28,8 @@ elif [[ "$1" == "deploy" ]];
 then
   source venv/bin/activate
   bash -c "TZ=UTC date +'/%Y-%m-%d %H:%M:/,\$p' > date.txt"
-  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1
-  ./google-cloud-sdk/bin/gcloud endpoints services deploy ./package_moduleshelf/api.yaml
+  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1 --promote --quiet --stop-previous-version
+  ./google-cloud-sdk/bin/gcloud endpoints services deploy ./api/api.yaml
   ./google-cloud-sdk/bin/gcloud app logs read --limit=100 > deployLog.txt
   sed -f date.txt -n deployLog.txt > deployLogRecent.txt
   deactivate
@@ -42,6 +42,7 @@ then
   rm date.txt
   rm deployLog*
   rm -rf venv
+  ./google-cloud-sdk/bin/gcloud endpoints services delete servicename
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*
 fi
