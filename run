@@ -9,16 +9,31 @@ then
   venv/bin/pip install --upgrade pip
   venv/bin/pip install --upgrade --force-reinstall --no-cache-dir -r requirements.txt
   
-  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
-  tar -xf google-cloud-sdk-364.0.0-linux-x86_64.tar.gz
+  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.0-linux-x86_64.tar.gz
+  tar -xf google-cloud-sdk-365.0.0-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q
   ./google-cloud-sdk/bin/gcloud config set compute/zone us-east1-c
   ./google-cloud-sdk/bin/gcloud init
   
   bash -c "venv/bin/pip freeze -l | sed 's/==.*//g'" > requirements.txt
-
   echo "Dependencies Installed"
   deactivate
+elif [[ "$1" == "installTest" ]];
+then
+  source venv/bin/activate
+  
+  curl -qL https://www.npmjs.com/install.sh | sh
+  mkdir -p ./venv/node_modules
+  npm install --prefix ./venv api-spec-converter
+  npm audit fix --force
+  venv/node_modules/api-spec-converter/bin/api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml ECE*.yaml | awk 'NR==2{print "host: ece461-p2-t3.appspot.com"}1' > api1.yaml
+  awk 'NR != 395' api1.yaml > tmpfile.yaml && mv tmpfile.yaml api2.yaml
+  awk '!/summary/' api2.yaml > tmpfile.yaml && mv tmpfile.yaml ./api/api.yaml
+  
+  ./google-cloud-sdk/bin/gcloud endpoints services deploy api1.yaml
+  ./google-cloud-sdk/bin/gcloud endpoints services deploy api2.yaml
+  deactivate
+  
 elif [[ "$1" == "pylint" ]];
 then
   source venv/bin/activate
@@ -45,4 +60,5 @@ then
   ./google-cloud-sdk/bin/gcloud endpoints services delete servicename
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*
+  rm -rf ./api/api.yaml
 fi

@@ -14,13 +14,25 @@ info:
   version: 1.0.0
 paths:
   /authenticate:
+    description: >-
+      If your system supports the authentication scheme described in the spec,
+      then:
+
+
+      1. The obtained token should be provided to the other endpoints via the
+      "X-Authorization" header.
+
+      2. The "Authorization" header is *required* in your system.
+
+
+      Otherwise, this endpoint should return HTTP 501 "Not implemented", and the
+      "X-Authorization" header should be unused for the other endpoints.
     put:
       consumes:
         - application/json
       produces:
         - application/json
       parameters:
-        - description: If your system supports the authentication scheme described in the spec, then 1. The obtained token should be provided to the other endpoints via the "X-Authorization" header. 2. The "Authorization" header is *required* in your system. Otherwise, this endpoint should return HTTP 501 "Not implemented", and the "X-Authorization" header should be unused for the other endpoints.
         - in: body
           name: body
           required: true
@@ -36,6 +48,7 @@ paths:
         '501':
           description: This system does not support authentication.
       operationId: CreateAuthToken
+    summary: Authenticate this user -- get an access token.
   /package:
     parameters:
       - description: >-
@@ -46,13 +59,16 @@ paths:
         name: X-Authorization
         required: true
         type: string
+    description: >-
+      The "ID" field in the request body allows the user to use their own ID
+      scheme. If this ID is already in use, the system chooses a new ID and
+      indicates this in the response body.
     post:
       consumes:
         - application/json
       produces:
         - application/json
       parameters:
-        - description: The "ID" field in the request body allows the user to use their own ID scheme. If this ID is already in use, the system chooses a new ID and indicates this in the response body.
         - in: body
           name: body
           required: true
@@ -68,8 +84,18 @@ paths:
         '403':
           description: Package exists already.
       operationId: PackageCreate
+    summary: Create a version of a package
   '/package/byName/{name}':
     parameters:
+      - description: |-
+          Name of a package.
+
+          - Names should only use typical "keyboard" characters.
+          - The name "*" is reserved. See the `/packages` API for its meaning.
+        in: path
+        name: name
+        required: true
+        type: string
       - description: >-
           The spec permits you to use any token format you like. You could, for
           example, look into JSON Web Tokens ("JWT", pronounced "jots"):
@@ -94,11 +120,11 @@ paths:
         '400':
           description: No such package.
       operationId: PackageByNameDelete
+      summary: Delete all versions of this package.
     get:
       produces:
         - application/json
-      parameters:
-        - description: Return the history of this package (all versions).
+      parameters: []
       responses:
         '200':
           description: Package history
@@ -112,13 +138,22 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/Error'
+      description: Return the history of this package (all versions).
       operationId: PackageByNameGet
+    summary: Interact with the package with this name
   '/package/{id}':
     parameters:
       - description: Package ID
         in: path
         name: id
         required: true
+        type: string
+      - description: >-
+          The spec permits you to use any token format you like. You could, for
+          example, look into JSON Web Tokens ("JWT", pronounced "jots"):
+          https://jwt.io.
+        in: header
+        name: X-Authorization
         type: string
     delete:
       parameters:
@@ -133,6 +168,7 @@ paths:
         '400':
           description: No such package.
       operationId: PackageDelete
+      summary: Delete this version of the package.
     get:
       produces:
         - application/json
@@ -151,12 +187,13 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/Error'
+      description: Return this package.
       operationId: PackageRetrieve
     put:
       consumes:
         - application/json
       parameters:
-        - description: The name, version, and ID must match. The package contents (from PackageData) will replace the previous contents.
+        - description: ''
           in: path
           name: id
           required: true
@@ -171,7 +208,15 @@ paths:
           description: Success.
         '400':
           description: Malformed request (e.g. no such package).
+      description: >-
+        The name, version, and ID must match.
+
+
+        The package contents (from PackageData) will replace the previous
+        contents.
       operationId: PackageUpdate
+      summary: Update this version of the package.
+    summary: Interact with the package with this ID
   '/package/{id}/rate':
     parameters:
       - in: path
@@ -199,6 +244,7 @@ paths:
         '500':
           description: The package rating system choked on at least one of the metrics.
       operationId: PackageRate
+    summary: Get the rating for this package.
   /packages:
     parameters:
       - description: >-
@@ -208,6 +254,16 @@ paths:
         in: header
         name: X-Authorization
         type: string
+    description: >-
+      Search for packages satisfying the indicated query.
+
+
+      If you want to enumerate all packages, provide an array with a single
+      PackageQuery whose name is "*".
+
+
+      The response is paginated; the response header includes the offset to use
+      in the next query.
     get:
       consumes:
         - application/json
@@ -243,6 +299,8 @@ paths:
             $ref: '#/definitions/Error'
       description: Get any packages fitting the query.
       operationId: PackagesList
+      summary: Get packages
+    summary: Query the registry.
   /reset:
     parameters:
       - description: >-
@@ -260,6 +318,7 @@ paths:
         '401':
           description: You do not have permission to reset the registry.
       operationId: RegistryReset
+    summary: Reset registry
 definitions:
   AuthenticationRequest:
     description: ''
