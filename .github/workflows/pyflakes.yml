@@ -28,5 +28,4 @@ jobs:
         
     - name: Analyzing code with Pyflakes
       run: |
-        chmod +x ./run
-        ./run pyflakes
+        find ./project1given -name '*.py' -exec pyflakes {} \;
