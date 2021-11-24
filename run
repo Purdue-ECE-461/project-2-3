@@ -57,6 +57,7 @@ then
   rm date.txt
   rm deployLog*
   rm -rf venv
+  rm -rf packageTemp
   ./google-cloud-sdk/bin/gcloud endpoints services delete servicename
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*
