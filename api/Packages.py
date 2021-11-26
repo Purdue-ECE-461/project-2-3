@@ -6,7 +6,7 @@ class Packages(Resource):
     self.QueryArray = []
     packageDictionary = {}
     
-    def get(self): #PackagesList
+    def post(self): #PackagesList
         auth = None
         auth = request.headers.get("X-Authorization")
         self.QueryArray = request.get_json()

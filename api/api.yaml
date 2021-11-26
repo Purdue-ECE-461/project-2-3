@@ -11,7 +11,7 @@ info:
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   termsOfService: 'http://swagger.io/terms/'
   title: ECE 461 - Fall 2021 - Project 2
-  version: 1.0.0
+  version: 2.0.0
 paths:
   /authenticate:
     put:
@@ -208,7 +208,7 @@ paths:
         in: header
         name: X-Authorization
         type: string
-    get:
+    post:
       consumes:
         - application/json
       produces:

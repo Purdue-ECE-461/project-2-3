@@ -11,7 +11,7 @@ info:
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   termsOfService: 'http://swagger.io/terms/'
   title: ECE 461 - Fall 2021 - Project 2
-  version: 1.0.0
+  version: 2.0.0
 paths:
   /authenticate:
     description: >-
@@ -264,7 +264,7 @@ paths:
 
       The response is paginated; the response header includes the offset to use
       in the next query.
-    get:
+    post:
       consumes:
         - application/json
       produces:
@@ -490,7 +490,7 @@ definitions:
           specific major+minor version, e.g. version 2.3.X of a package. (If
           there are zero dependencies, they should receive a 1.0 rating. If
           there are two dependencies, one pinned to this degree, then they
-          should receive a ½ = 0.5 rating).
+          should receive a Â½ = 0.5 rating).
         format: double
         type: number
       LicenseScore:
