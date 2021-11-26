@@ -22,11 +22,11 @@ elif [[ "$1" == "installTest" ]];
 then
   source venv/bin/activate
   
-  curl -qL https://www.npmjs.com/install.sh | sh
-  mkdir -p ./venv/node_modules
-  npm install --prefix ./venv api-spec-converter
+  venv/bin/pip install --upgrade nodeenv
+  nodeenv -p
+  npm install -g api-spec-converter
   npm audit fix --force
-  venv/node_modules/api-spec-converter/bin/api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml ECE*.yaml | awk 'NR==2{print "host: ece461-p2-t3.appspot.com"}1' > api1.yaml
+  venv/bin/api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml ECE*.yaml | awk 'NR==2{print "host: ece461-p2-t3.appspot.com"}1' > api1.yaml
   awk 'NR != 395' api1.yaml > tmpfile.yaml && mv tmpfile.yaml api2.yaml
   awk '!/summary/' api2.yaml > tmpfile.yaml && mv tmpfile.yaml ./api/api.yaml
   
