@@ -2,7 +2,7 @@
 openapi: 3.0.2
 info:
   title: ECE 461 - Fall 2021 - Project 2
-  version: 1.0.0
+  version: 2.0.0
   description: "API for ECE 461/Fall 2021/Project 2: A Trustworthy Module Registry"
   termsOfService: http://swagger.io/terms/
   contact:
@@ -21,7 +21,7 @@ paths:
       If you want to enumerate all packages, provide an array with a single PackageQuery whose name is "*".
 
       The response is paginated; the response header includes the offset to use in the next query.
-    get:
+    post:
       requestBody:
         content:
           application/json:
@@ -449,7 +449,7 @@ components:
             \ a specific major+minor version, e.g. version 2.3.X of a package. (If\
             \ there are zero dependencies, they should receive a 1.0 rating. If there\
             \ are two dependencies, one pinned to this degree, then they should receive\
-            \ a ½ = 0.5 rating)."
+            \ a Â½ = 0.5 rating)."
           type: number
     PackageHistoryEntry:
       description: One entry of the history of this package.
