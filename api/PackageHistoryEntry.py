@@ -1,6 +1,7 @@
 class PackageHistoryEntry(object):
     import User
     import MetaData
+    import PackageData
     
     static Action = Enum('Action', 'CREATE UPDATE DOWNLOAD RATE')
     

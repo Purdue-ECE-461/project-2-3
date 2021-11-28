@@ -1,6 +1,7 @@
 import Flask-RESTful
 class Reset(Resource):
     import firestore
+    import Packages
     
     def delete(self): #RegistryReset
         auth = None
@@ -10,4 +11,4 @@ class Reset(Resource):
             return e.set("You do not have permission to reset the registry.", 401)
         
         firestore.delete_all_package_modules()
-        return 200
+        return Packages.delete_all()
