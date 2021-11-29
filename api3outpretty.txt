@@ -1,0 +1,28 @@
+ERROR: (gcloud.endpoints.services.deploy) INVALID_ARGUMENT: Cannot convert to service config.
+'location: "unknown location"
+kind: ERROR
+message: "Invalid OpenAPI file. Please fix the schema errors:
+error: object instance has properties which are not allowed by the schema: [\"description\"]
+    level: \"error\"
+    schema: {\"loadingURI\":\"http://swagger.io/v2/schema.json#\",\"pointer\":\"/definitions/pathItem\"}
+    instance: {\"pointer\":\"/paths/~1authenticate\"}
+    domain: \"validation\"
+    keyword: \"additionalProperties\"
+    unwanted: [\"description\"]
+
+error: object instance has properties which are not allowed by the schema: [\"description\"]
+    level: \"error\"
+    schema: {\"loadingURI\":\"http://swagger.io/v2/schema.json#\",\"pointer\":\"/definitions/pathItem\"}
+    instance: {\"pointer\":\"/paths/~1package\"}
+    domain: \"validation\"
+    keyword: \"additionalProperties\"
+    unwanted: [\"description\"]
+
+error: object instance has properties which are not allowed by the schema: [\"description\"]
+    level: \"error\"
+    schema: {\"loadingURI\":\"http://swagger.io/v2/schema.json#\",\"pointer\":\"/definitions/pathItem\"}
+    instance: {\"pointer\":\"/paths/~1packages\"}
+    domain: \"validation\"
+    keyword: \"additionalProperties\"
+    unwanted: [\"description\"]"
+'

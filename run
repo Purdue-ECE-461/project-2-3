@@ -36,8 +36,10 @@ then
   
   bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api1.yaml" 2> api1out.txt
   bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api2.yaml" 2> api2out.txt
+  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api/api.yaml" 2> api3out.txt
   awk '{gsub(/\\n/,"\n")}1' api1out.txt > api1outpretty.txt
   awk '{gsub(/\\n/,"\n")}1' api2out.txt > api2outpretty.txt
+  awk '{gsub(/\\n/,"\n")}1' api3out.txt > api3outpretty.txt
   deactivate
 elif [[ "$1" == "pylint" ]];
 then
