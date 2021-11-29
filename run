@@ -9,8 +9,8 @@ then
   venv/bin/pip install --upgrade pip
   venv/bin/pip install --upgrade --force-reinstall --no-cache-dir -r requirements.txt
   
-  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.0-linux-x86_64.tar.gz
-  tar -xf google-cloud-sdk-365.0.0-linux-x86_64.tar.gz
+  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.1-linux-x86_64.tar.gz
+  tar -xf google-cloud-sdk-365.0.1-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q
   ./google-cloud-sdk/bin/gcloud config set compute/zone us-east1-c
   ./google-cloud-sdk/bin/gcloud init
@@ -18,28 +18,12 @@ then
   bash -c "venv/bin/pip freeze -l | sed 's/==.*//g'" > requirements.txt
   echo "Dependencies Installed"
   deactivate
-elif [[ "$1" == "installTest" ]];
-then
-  source venv/bin/activate
-  
-  venv/bin/pip install --upgrade nodeenv
-  nodeenv -p
-  npm install -g api-spec-converter
-  npm audit fix --force
-  deactivate
 elif [[ "$1" == "deployTest" ]];
 then
   source venv/bin/activate
-  venv/bin/api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml ECE*.yaml | awk 'NR==2{print "host: ece461-p2-t3.appspot.com"}1' > api1.yaml
-  awk 'NR != 395' api1.yaml > tmpfile.yaml && mv tmpfile.yaml api2.yaml
-  awk '!/summary/' api2.yaml > tmpfile.yaml && mv tmpfile.yaml ./api/api.yaml
-  
-  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api1.yaml" 2> api1out.txt
-  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api2.yaml" 2> api2out.txt
-  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api/api.yaml" 2> api3out.txt
-  awk '{gsub(/\\n/,"\n")}1' api1out.txt > api1outpretty.txt
-  awk '{gsub(/\\n/,"\n")}1' api2out.txt > api2outpretty.txt
-  awk '{gsub(/\\n/,"\n")}1' api3out.txt > api3outpretty.txt
+  sed 's/"title": "ECE 461 - Fall 2021 - Project 2.paw",/"title": "ECE 461 - Fall 2021 - Project 2",/' api.json | sed '8,9d' | sed 's/"version": "v0\.0\.0"/"version": "v1\.0\.0"/' | sed 's/"schemes": \[/"host": "ece461-p2-t3.appspot.com",/' | sed 's/"basePath": "\/",/"basePath": "\/v1",/' > api/api.json
+  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy --validate-only api/api.json" 2> apiout.txt 1> apisuccess.txt
+  awk '{gsub(/\\n/,"\n")}1' apiout.txt > apioutpretty.txt
   deactivate
 elif [[ "$1" == "pylint" ]];
 then
@@ -63,9 +47,9 @@ elif [[ "$1" == "clean" ]];
 then
   rm date.txt
   rm deployLog*
+  rm api*
   rm -rf venv
   rm -rf packageTemp
-  ./google-cloud-sdk/bin/gcloud endpoints services delete servicename
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*
   rm -rf ./api/api.yaml

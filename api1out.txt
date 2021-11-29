@@ -1,5 +1,0 @@
-ERROR: (gcloud.endpoints.services.deploy) INVALID_ARGUMENT: Cannot convert to service config.
-'location: "unknown location"
-kind: ERROR
-message: "Invalid OpenAPI file. Please fix the schema errors:\nerror: array is too short: must have at least 1 elements but instance has 0 elements\n    level: \"error\"\n    schema: {\"loadingURI\":\"http://json-schema.org/draft-04/schema#\",\"pointer\":\"/definitions/stringArray\"}\n    instance: {\"pointer\":\"/definitions/PackageData/required\"}\n    domain: \"validation\"\n    keyword: \"minItems\"\n    minItems: 1\n    found: 0"
-'
