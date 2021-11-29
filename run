@@ -26,14 +26,19 @@ then
   nodeenv -p
   npm install -g api-spec-converter
   npm audit fix --force
+  deactivate
+elif [[ "$1" == "deployTest" ]];
+then
+  source venv/bin/activate
   venv/bin/api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml ECE*.yaml | awk 'NR==2{print "host: ece461-p2-t3.appspot.com"}1' > api1.yaml
   awk 'NR != 395' api1.yaml > tmpfile.yaml && mv tmpfile.yaml api2.yaml
   awk '!/summary/' api2.yaml > tmpfile.yaml && mv tmpfile.yaml ./api/api.yaml
   
-  ./google-cloud-sdk/bin/gcloud endpoints services deploy api1.yaml
-  ./google-cloud-sdk/bin/gcloud endpoints services deploy api2.yaml
+  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api1.yaml" 2> api1out.txt
+  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api2.yaml" 2> api2out.txt
+  awk '{gsub(/\\n/,"\n")}1' api1out.txt > api1outpretty.txt
+  awk '{gsub(/\\n/,"\n")}1' api2out.txt > api2outpretty.txt
   deactivate
-  
 elif [[ "$1" == "pylint" ]];
 then
   source venv/bin/activate
