@@ -1,11 +1,13 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "ECE 461 - Fall 2021 - Project 2",
-    "version": "v1.0.0"
+    "title": "ECE 461 - Fall 2021 - Project 2.paw",
+    "version": "v0.0.0"
   },
-  "host": "ece461-p2-t3.appspot.com",
-  "basePath": "/v1",
+  "schemes": [
+    null
+  ],
+  "basePath": "/",
   "paths": {
     "/package/:id": {
       "get": {

@@ -18,13 +18,6 @@ then
   bash -c "venv/bin/pip freeze -l | sed 's/==.*//g'" > requirements.txt
   echo "Dependencies Installed"
   deactivate
-elif [[ "$1" == "deployTest" ]];
-then
-  source venv/bin/activate
-  sed 's/"title": "ECE 461 - Fall 2021 - Project 2.paw",/"title": "ECE 461 - Fall 2021 - Project 2",/' api.json | sed '8,9d' | sed 's/"version": "v0\.0\.0"/"version": "v1\.0\.0"/' | sed 's/"schemes": \[/"host": "ece461-p2-t3.appspot.com",/' | sed 's/"basePath": "\/",/"basePath": "\/v1",/' > api/api.json
-  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy --validate-only api/api.json" 2> apiout.txt 1> apisuccess.txt
-  awk '{gsub(/\\n/,"\n")}1' apiout.txt > apioutpretty.txt
-  deactivate
 elif [[ "$1" == "pylint" ]];
 then
   source venv/bin/activate
@@ -34,8 +27,14 @@ elif [[ "$1" == "deploy" ]];
 then
   source venv/bin/activate
   bash -c "TZ=UTC date +'/%Y-%m-%d %H:%M:/,\$p' > date.txt"
-  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml --version=v1 --promote --quiet --stop-previous-version
-  ./google-cloud-sdk/bin/gcloud endpoints services deploy ./api/api.yaml
+  
+  sed 's/"title": "ECE 461 - Fall 2021 - Project 2.paw",/"title": "ECE 461 - Fall 2021 - Project 2",/' apiImported.json | sed '8,9d' | sed 's/"version": "v0\.0\.0"/"version": "v1\.0\.0"/' | sed 's/"schemes": \[/"host": "ece461-p2-t3.appspot.com",/' | sed 's/"basePath": "\/",/"basePath": "\/v1",/' > api/api.json
+  
+  bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api/api.json" 2> deployLogapiout.txt 1> deployLogapisuccess.txt
+  awk '{gsub(/\\n/,"\n")}1' deployLogapiout.txt > deployLogapioutpretty.txt
+  
+  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml ./api/apiAppEngine.yaml --version=v1 --promote --quiet --stop-previous-version
+  
   ./google-cloud-sdk/bin/gcloud app logs read --limit=100 > deployLog.txt
   sed -f date.txt -n deployLog.txt > deployLogRecent.txt
   deactivate
@@ -47,10 +46,9 @@ elif [[ "$1" == "clean" ]];
 then
   rm date.txt
   rm deployLog*
-  rm api*
   rm -rf venv
   rm -rf packageTemp
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*
-  rm -rf ./api/api.yaml
+  rm -rf ./api/api.json
 fi
