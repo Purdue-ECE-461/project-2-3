@@ -28,10 +28,10 @@ jobs:
         
     - name: Analyzing code with Pyflakes
       run: |
-        find ./api -name '*.py' -exec pyflakes -q -r {} \;
-        find ./authenticating-users -name '*.py' -exec pyflakes -q -r {} \;
-        find ./background -name '*.py' -exec pyflakes -q -r {} \;
-        find ./optional-kubernetes-engine -name '*.py' -exec pyflakes -q -r {} \;
-        find ./package_moduleshelf -name '*.py' -exec pyflakes -q -r {} \;
-        find ./project1given -name '*.py' -exec pyflakes -q -r {} \;
-        find ./sessions -name '*.py' -exec pyflakes -q -r {} \;
+        find ./api -name '*.py' -exec pyflakes {} \;
+        find ./authenticating-users -name '*.py' -exec pyflakes {} \;
+        find ./background -name '*.py' -exec pyflakes {} \;
+        find ./optional-kubernetes-engine -name '*.py' -exec pyflakes {} \;
+        find ./package_moduleshelf -name '*.py' -exec pyflakes {} \;
+        find ./project1given -name '*.py' -exec pyflakes {} \;
+        find ./sessions -name '*.py' -exec pyflakes {} \;
