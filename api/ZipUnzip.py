@@ -3,7 +3,8 @@ import zipfile
 import tarfile
 import shutil
 import os
-import time 
+import time
+import glob
 from pathlib import Path
 
 class ZipUnzip :
@@ -97,6 +98,7 @@ class ZipUnzip :
 
 if __name__ == "__main__" :
     test = ZipUnzip()
+    test.file_zip()
     encoded = test.base64Encode("packages/underscore-master.zip")
     with open("b64test.txt", 'wb') as file:
         file.write(encoded)
@@ -113,6 +115,9 @@ if __name__ == "__main__" :
     with open("packages/underscore-master3.zip", 'wb') as file:
         file.write(decoded)
     test.file_unzip("underscore-master3.zip")
+    time.sleep(5)
+    for file in glob.glob('packageTemp/*.zip'):
+        print(file)
+        os.remove(file)
     test.file_zip()
     time.sleep(5)
-    test.clean()

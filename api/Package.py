@@ -1,5 +1,7 @@
-class Package(Resource):
-    import Flask-RESTful
+from flask import Flask
+from flask.ext.classy import FlaskView
+app = Flask(__name__)
+class Package(FlaskView):
     import firestore
     import datetime
     import MetaData
@@ -111,4 +113,4 @@ class Package(Resource):
         def __eq__(self, obj):
             return self.metadata == obj.metadata
         
-    
+Package.register(app)

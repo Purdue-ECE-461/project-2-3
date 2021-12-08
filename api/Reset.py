@@ -1,9 +1,11 @@
-import Flask-RESTful
-class Reset(Resource):
+from flask import Flask
+from flask.ext.classy import FlaskView
+app = Flask(__name__)
+class Reset(FlaskView):
     import firestore
     import Packages
     
-    def delete(self): #RegistryReset
+    def static delete(self): #RegistryReset
         auth = None
         auth = request.headers.get("X-Authorization")
         if(auth == None):
@@ -12,3 +14,5 @@ class Reset(Resource):
         
         firestore.delete_all_package_modules()
         return Packages.delete_all()
+
+Reset.register(app)
