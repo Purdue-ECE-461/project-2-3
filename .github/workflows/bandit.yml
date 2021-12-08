@@ -29,6 +29,6 @@ jobs:
     - name: Analyzing code with Bandit
       run: |
         chmod +x ./run
-        find ./api -name '*.py' -exec bandit -r {} \;
-        # find ./authenticating-users -name '*.py' -exec bandit -r {} \;
+        # find ./api -name '*.py' -exec bandit -r {} \;
+        find ./authenticating-users -name '*.py' -exec bandit -r {} \;
         # find ./project1given -name '*.py' -exec bandit -r {} \;
