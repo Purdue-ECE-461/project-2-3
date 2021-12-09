@@ -30,5 +30,4 @@ jobs:
         find ./background -name '*.py' -exec pylint {} \;
         find ./optional-kubernetes-engine -name '*.py' -exec pylint {} \;
         find ./package_moduleshelf -name '*.py' -exec pylint {} \;
-        find ./project1given -name '*.py' -exec pylint {} \;
         find ./sessions -name '*.py' -exec pylint {} \;
