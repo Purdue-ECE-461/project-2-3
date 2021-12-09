@@ -8,6 +8,11 @@ then
   echo "Installing Dependencies"
   venv/bin/pip install --upgrade pip
   venv/bin/pip install --upgrade --force-reinstall --no-cache-dir -r requirements.txt
+  nodeenv env
+  env/bin/activate
+  env/bin/npm install npm
+  env/bin/npm install npm-audit-html
+  env/bin/npm audit fix --force
   
   curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.1-linux-x86_64.tar.gz
   tar -xf google-cloud-sdk-365.0.1-linux-x86_64.tar.gz
@@ -46,6 +51,7 @@ then
   rm date.txt
   rm deployLog*
   rm -rf venv
+  rm -rf env
   rm -rf packageTemp
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*

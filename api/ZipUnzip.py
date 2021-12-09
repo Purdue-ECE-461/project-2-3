@@ -48,6 +48,7 @@ class ZipUnzip :
         os.rmdir(folder)
        
     def file_zip (self) :
+        entry = " "
         for directory in os.walk("packageTemp") :
             entry = directory
 

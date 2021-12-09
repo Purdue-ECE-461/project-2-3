@@ -5,6 +5,7 @@ class Reset(FlaskView):
     import firestore
     import Packages
     
+    @route('/reset/')
     def static delete(self): #RegistryReset
         auth = None
         auth = request.headers.get("X-Authorization")

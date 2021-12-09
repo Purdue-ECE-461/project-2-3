@@ -16,6 +16,7 @@ class Package(FlaskView):
     self.history = []
     self.rating = None
     
+    @route('/package/')
     def get(self): #PackageRetrieve
         self.metadata = self.metadata.get_data()
         self.data = self.data.get_data(self.metadata.get_ID())

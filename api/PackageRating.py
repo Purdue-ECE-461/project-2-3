@@ -1,7 +1,7 @@
-from project1given.src.URL_info import URL_info
-
-
-class PackageRating(object):
+from flask import Flask
+from flask.ext.classy import FlaskView
+app = Flask(__name__)
+class PackageRating(FlaskView):
     import Packages
     import Package
     import PackageHistoryEntry
@@ -16,7 +16,8 @@ class PackageRating(object):
     self.LicenseScore = None
     self.GoodPinningPractice = None
     
-    def static rate_by_ID(id):
+    @route('/package/<id>/rate')
+    def rate_by_ID(self, id):
         rateObj = new PackageRating()
         pack = Packages.packageDictionary[id]
         if pack == None:
