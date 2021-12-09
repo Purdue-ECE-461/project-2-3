@@ -1,5 +1,7 @@
-from flask import Flask
-from flask_classful import FlaskView
+from flask import Flask, request
+import responses
+import requests
+from flask_classful import FlaskView, route
 
 app = Flask(__name__)
 
@@ -7,8 +9,8 @@ class Packages(FlaskView):
     import Package
     import PackageQuery
     import Error
-    self.QueryArray = []
-    self.QueryResult = []
+    QueryArray = []
+    QueryResult = []
     packageDictionary = {}
     
     @route('/packages/')
@@ -34,7 +36,7 @@ class Packages(FlaskView):
                     return jsonify(self.QueryResult), 500
         return jsonify(self.QueryResult), 200
     
-    def static add_package(p):
+    def add_package(self, p):
         packageDictionary[p.metadata.get_ID()] = p
         return
     
@@ -52,14 +54,28 @@ class Packages(FlaskView):
                 return jsonify(pack.history), 200
         return 400
     
-    def static delete_package(p):
+    def delete_package(self, p):
         for ID,pack in packageDictionary.items():
             if (pack == p):
                 del packageDictionary[id]
                 return 200
         return 400
-    def static delete_all():
+    def delete_all(self):
         for ID,pack in packageDictionary.items():
             del packageDictionary[id]
         return 200
-        
+    
+    @responses.activate
+    def test(self):
+        responses.add(
+           responses.POST,
+           "http://api-dot-ece461-p2-t3.uc.r.appspot.com/packages",
+           json={{"Version": "1.2.3","Name": "*"}},
+           status=200
+        )
+        response = requests.post("http://api-dot-ece461-p2-t3.uc.r.appspot.com/packages", headers={"X-Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"})
+        print(response)
+if __name__ == "__main__" :
+    test = Packages()
+    test.test()
+     

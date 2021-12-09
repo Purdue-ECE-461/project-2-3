@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_classful import FlaskView
+from flask_classful import FlaskView, route
 app = Flask(__name__)
 class Package(FlaskView):
     import firestore
@@ -39,7 +39,7 @@ class Package(FlaskView):
             self.metadata = self.metadata.set_data(jsonify(prevmeta))
             e = Error()
             return e.set("Package exists already.", 403)
-        if(self.metadata.Name == None || self.metadata.Version == None || self.metadata.get_ID() == None):
+        if(self.metadata.Name == None or self.metadata.Version == None or self.metadata.get_ID() == None):
             self.metadata = self.metadata.set_data(jsonify(prevmeta))            
             e = Error()
             return e.set("Malformed request.", 400)
@@ -60,7 +60,7 @@ class Package(FlaskView):
             self.data.URL = prevdata.URL
             firestore.update(jsonify(self.data), self.metadata.get_ID())
         action = PackageHistoryEntry()
-        action.Action = PackageHistoryEntry.Action.CREATE
+        action.Action = PackageHistoryEntry.ActionEnum.CREATE
         action.PackageMetaData = self.metadata
         action.Date = datetime.now()
         self.history.append(action)
@@ -99,7 +99,7 @@ class Package(FlaskView):
         
         Packages.delete_package(self)#delete old version based on metadata
         action = PackageHistoryEntry()
-        action.Action = PackageHistoryEntry.Action.UPDATE
+        action.Action = PackageHistoryEntry.ActionEnum.UPDATE
         action.PackageMetaData = self.metadata
         action.Date = datetime.now()
         self.history.append(action)
@@ -110,7 +110,6 @@ class Package(FlaskView):
             firestore.delete(self.metadata.get_ID())
             return Packages.delete_package(self)
         
-        @Override
         def __eq__(self, obj):
             return self.metadata == obj.metadata
         

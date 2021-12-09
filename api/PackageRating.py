@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_classful import FlaskView
+from flask_classful import FlaskView, route
 app = Flask(__name__)
 class PackageRating(FlaskView):
     import Packages
@@ -9,12 +9,12 @@ class PackageRating(FlaskView):
     from project1given import Metrics
     from project1given import URL_info
 
-    self.RampUp = None
-    self.Correctness = None
-    self.BusFactor = None
-    self.ResponsiveMaintainer = None
-    self.LicenseScore = None
-    self.GoodPinningPractice = None
+    RampUp = None
+    Correctness = None
+    BusFactor = None
+    ResponsiveMaintainer = None
+    LicenseScore = None
+    GoodPinningPractice = None
     
     @route('/package/<id>/rate')
     def rate_by_ID(self, id):
@@ -38,7 +38,7 @@ class PackageRating(FlaskView):
         total = None
         
         action = PackageHistoryEntry()
-        action.Action = PackageHistoryEntry.Action.RATE
+        action.Action = PackageHistoryEntry.ActionEnum.RATE
         action.PackageMetaData = pack.metadata
         action.Date = datetime.now()
         pack.history.append(action)

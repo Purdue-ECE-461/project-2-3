@@ -1,6 +1,6 @@
 class PackageQuery(object):
-    self.Name = None
-    self.Version = None
+    Name = None
+    Version = None
     def get_data():
         return self
     def set_data(data):

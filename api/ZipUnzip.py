@@ -4,7 +4,6 @@ import tarfile
 import shutil
 import os
 import time
-import glob
 from pathlib import Path
 
 class ZipUnzip :
@@ -51,16 +50,14 @@ class ZipUnzip :
         entry = " "
         for directory in os.walk("packageTemp") :
             entry = directory
-
         path = entry[0]
         filename = entry[0].split("\\")[-1]
-    
         try :
             shutil.make_archive(filename, "zip", path)
             shutil.move(filename + ".zip", "packageTemp")
             print("Archive created!")
-        except :
-            print("Archive could not be created.")
+        except Exception as e:
+            print('Archive could not be created. Reason: %s' % e)
             return 
 
     def file_unzip (self, filename) :
@@ -88,10 +85,10 @@ if __name__ == "__main__" :
     with open("b64test.txt", 'wb') as file:
         file.write(encoded)
     decoded = test.base64Decode("b64test.txt")
-    print(decoded)
     with open("packages/underscore-master2.zip", 'wb') as file:
         file.write(decoded)
     test.file_unzip("underscore-master2.zip")
+'''
     test.file_zip()
     time.sleep(5)
     test.clean()
@@ -101,8 +98,6 @@ if __name__ == "__main__" :
         file.write(decoded)
     test.file_unzip("underscore-master3.zip")
     time.sleep(5)
-    for file in glob.glob('packageTemp/*.zip'):
-        print(file)
-        os.remove(file)
     test.file_zip()
     time.sleep(5)
+'''

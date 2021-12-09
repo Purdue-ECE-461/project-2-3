@@ -1,6 +1,6 @@
 class User(object):
-    self.name = None
-    self.isAdmin = True
+    name = None
+    isAdmin = True
     def get_data():
         return self
     def set_data(data):

@@ -1,6 +1,6 @@
 class Error(object):
-    self.code = 5
-    self.message = "test"
+    code = 5
+    message = "test"
     
     def get(self):
         return {'message': message}, code

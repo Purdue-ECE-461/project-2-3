@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_classful import FlaskView
+from flask_classful import FlaskView, route
 app = Flask(__name__)
 class Authenticate(FlaskView):
     import User

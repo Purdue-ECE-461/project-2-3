@@ -6,7 +6,7 @@ class Reset(FlaskView):
     import Packages
     
     @route('/reset/')
-    def static delete(self): #RegistryReset
+    def delete(self): #RegistryReset
         auth = None
         auth = request.headers.get("X-Authorization")
         if(auth == None):

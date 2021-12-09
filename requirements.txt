@@ -45,6 +45,7 @@ pylint
 pyparsing
 PyYAML
 requests
+responses
 rsa
 six
 toml

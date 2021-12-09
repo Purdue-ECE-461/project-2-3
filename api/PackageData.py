@@ -1,13 +1,13 @@
 class PackageData(object):
     import firestore
     from flask import request
-    self.Content = None
-    self.JSprogram = None
-    self.URL = None
+    Content = None
+    JSprogram = None
+    URL = None
     
     def get_data(ID):
         data = firestore.read(ID)
-        if(data == None)
+        if(data == None):
             return None
         self.Content = data["content"]
         self.JSprogram = data["JSprogram"]

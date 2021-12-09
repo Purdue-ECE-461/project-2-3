@@ -2,16 +2,17 @@ class PackageHistoryEntry(object):
     import User
     import MetaData
     import PackageData
+    from enum import Enum
     
-    static Action = Enum('Action', 'CREATE UPDATE DOWNLOAD RATE')
+    ActionEnum = Enum('Action', 'CREATE UPDATE DOWNLOAD RATE')
     
-    self.User = User()
-    self.Date = None
-    self.PackageMetadata = MetaData()
-    self.Action = Action.CREATE
-    def get_data():
+    User = User
+    Date = None
+    PackageMetadata = MetaData
+    Action = ActionEnum.CREATE
+    def get_data(self):
         return self
-    def set_data(data):
+    def set_data(self, data):
         self.User = data["User"]
         self.Date = data["Date"]
         self.PackageMetadata = data["PackageMetadata"]
