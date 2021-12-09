@@ -6,8 +6,15 @@ class PackageRating(FlaskView):
     import Package
     import PackageHistoryEntry
     import project1given
-    from project1given import Metrics
-    from project1given import URL_info
+    import project1given.src
+    import project1given.src.busfactor
+    import project1given.src.correctness
+    import project1given.src.gitclone
+    import project1given.src.URL_info
+    import project1given.src.licensing
+    import project1given.src.metrics
+    import project1given.src.rampup
+    import project1given.src.responseMaintainer
 
     RampUp = None
     Correctness = None

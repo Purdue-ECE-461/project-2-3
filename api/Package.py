@@ -11,10 +11,10 @@ class Package(FlaskView):
     import PackageRating
     import PackageHistoryEntry
     import PackageQuery
-    self.data = PackageData()
-    self.metadata = MetaData()
-    self.history = []
-    self.rating = None
+    data = PackageData
+    metadata = MetaData
+    history = []
+    rating = None
     
     @route('/package/')
     def get(self): #PackageRetrieve

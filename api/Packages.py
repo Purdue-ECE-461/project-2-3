@@ -64,18 +64,13 @@ class Packages(FlaskView):
         for ID,pack in packageDictionary.items():
             del packageDictionary[id]
         return 200
-    
-    @responses.activate
-    def test(self):
-        responses.add(
-           responses.POST,
-           "http://api-dot-ece461-p2-t3.uc.r.appspot.com/packages",
-           json={{"Version": "1.2.3","Name": "*"}},
-           status=200
-        )
-        response = requests.post("http://api-dot-ece461-p2-t3.uc.r.appspot.com/packages", headers={"X-Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"})
-        print(response)
+
+Packages.register(app)
+client = app.test_client()
 if __name__ == "__main__" :
     test = Packages()
-    test.test()
+    resp = client.post("/packages/",
+                       headers={"X-Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"},
+                       json={"Version": "1.2.3","Name": "*"})
+    print(resp)
      
