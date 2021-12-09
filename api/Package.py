@@ -1,5 +1,5 @@
 from flask import Flask
-from flask.ext.classy import FlaskView
+from flask_classful import FlaskView
 app = Flask(__name__)
 class Package(FlaskView):
     import firestore
@@ -11,8 +11,8 @@ class Package(FlaskView):
     import PackageRating
     import PackageHistoryEntry
     import PackageQuery
-    self.data = new PackageData()
-    self.metadata = new MetaData()
+    self.data = PackageData()
+    self.metadata = MetaData()
     self.history = []
     self.rating = None
     
@@ -26,7 +26,7 @@ class Package(FlaskView):
         auth = None
         auth = request.headers.get("X-Authorization")
         if(auth == None):
-            e = new Error()
+            e = Error()
             return e.set("Malformed request.", 400)
         parser = reqparse.RequestParser()
         parser.add_argument('metadata', required=True)
@@ -37,11 +37,11 @@ class Package(FlaskView):
         self.metadata = self.metadata.set_data(args['metadata'])
         if(self.metadata == None):
             self.metadata = self.metadata.set_data(jsonify(prevmeta))
-            e = new Error()
+            e = Error()
             return e.set("Package exists already.", 403)
         if(self.metadata.Name == None || self.metadata.Version == None || self.metadata.get_ID() == None):
             self.metadata = self.metadata.set_data(jsonify(prevmeta))            
-            e = new Error()
+            e = Error()
             return e.set("Malformed request.", 400)
         
         prevdata = self.data
@@ -51,7 +51,7 @@ class Package(FlaskView):
             return {"code": -1, "message": "An error occurred while retrieving package"}, 500
         if(self.data.Content == None and self.data.URL == None):
             self.data = self.data.set_data(jsonify(prevdata), self.metadata.get_ID())
-            e = new Error()
+            e = Error()
             return e.set("Malformed request.", 400)
         if (self.data.Content == None): #packageIngest
             self.data.Content = prevdata.Content
@@ -59,7 +59,7 @@ class Package(FlaskView):
         if (self.data.URL == None): #packageIngest
             self.data.URL = prevdata.URL
             firestore.update(jsonify(self.data), self.metadata.get_ID())
-        action = new PackageHistoryEntry()
+        action = PackageHistoryEntry()
         action.Action = PackageHistoryEntry.Action.CREATE
         action.PackageMetaData = self.metadata
         action.Date = datetime.now()
@@ -72,7 +72,7 @@ class Package(FlaskView):
             return rateresponse
         if self.rating < 0.5:
             self.delete()
-            e = new Error()
+            e = Error()
             return e.set("package recieved bad rating", 400)
         
         return jsonify(self.metadata), 201
@@ -81,7 +81,7 @@ class Package(FlaskView):
         auth = None
         auth = request.headers.get("X-Authorization")
         if(auth == None):
-            e = new Error()
+            e = Error()
             return e.set("Malformed request.", 400)
         parser = reqparse.RequestParser()
         parser.add_argument('metadata', required=True)
@@ -98,7 +98,7 @@ class Package(FlaskView):
             return 400
         
         Packages.delete_package(self)#delete old version based on metadata
-        action = new PackageHistoryEntry()
+        action = PackageHistoryEntry()
         action.Action = PackageHistoryEntry.Action.UPDATE
         action.PackageMetaData = self.metadata
         action.Date = datetime.now()

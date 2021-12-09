@@ -5,9 +5,9 @@ class PackageHistoryEntry(object):
     
     static Action = Enum('Action', 'CREATE UPDATE DOWNLOAD RATE')
     
-    self.User = new User()
+    self.User = User()
     self.Date = None
-    self.PackageMetadata = new MetaData()
+    self.PackageMetadata = MetaData()
     self.Action = Action.CREATE
     def get_data():
         return self

@@ -1,5 +1,5 @@
 from flask import Flask
-from flask.ext.classy import FlaskView
+from flask_classful import FlaskView
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ class Packages(FlaskView):
         auth = None
         auth = request.headers.get("X-Authorization")
         if(auth == None):
-            e = new Error()
+            e = Error()
             return e.set("Malformed request.", 400)
         self.QueryArray = request.get_json()
         self.QueryResult = []

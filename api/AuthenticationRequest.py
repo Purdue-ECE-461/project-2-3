@@ -1,8 +1,8 @@
 class AuthenticationRequest(object):
     import User
     import UserAuthenticationInfo
-    self.User = new User()
-    self.Secret = new UserAuthenticationInfo()
+    self.User = User()
+    self.Secret = UserAuthenticationInfo()
     def get_data():
         return self
     def set_data(data):
