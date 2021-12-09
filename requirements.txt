@@ -5,8 +5,6 @@ certifi
 charset-normalizer
 click
 Flask
-Flask-RESTful
-flask-restful-swagger
 google-api-core
 google-auth
 google-cloud-container
@@ -29,7 +27,10 @@ libcst
 MarkupSafe
 mccabe
 mypy-extensions
+nodeenv
+npm
 oauth2client
+optional-django
 platformdirs
 proto-plus
 protobuf
