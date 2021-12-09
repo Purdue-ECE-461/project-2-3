@@ -1,10 +1,12 @@
+appier
 astroid
 cachetools
 certifi
 charset-normalizer
 click
 Flask
-Flask-Classy
+Flask-Classful
+google-api
 google-api-core
 google-api-python-client
 google-auth
@@ -12,6 +14,7 @@ google-auth-httplib2
 google-cloud
 google-cloud-container
 google-cloud-core
+google-cloud-firestore
 google-cloud-storage
 google-crc32c
 google-resumable-media
@@ -31,6 +34,7 @@ libcst
 MarkupSafe
 mccabe
 mypy-extensions
+packaging
 platformdirs
 proto-plus
 protobuf

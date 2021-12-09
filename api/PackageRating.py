@@ -1,5 +1,5 @@
 from flask import Flask
-from flask.ext.classy import FlaskView
+from flask_classful import FlaskView
 app = Flask(__name__)
 class PackageRating(FlaskView):
     import Packages
@@ -18,10 +18,10 @@ class PackageRating(FlaskView):
     
     @route('/package/<id>/rate')
     def rate_by_ID(self, id):
-        rateObj = new PackageRating()
+        rateObj = PackageRating()
         pack = Packages.packageDictionary[id]
         if pack == None:
-            e = new Error()
+            e = Error()
             return e.set("Malformed request.", 400)
         url = pack.data.URL
         #TODO call scoring here
@@ -37,7 +37,7 @@ class PackageRating(FlaskView):
         rateObj.GoodPinningPractice = None
         total = None
         
-        action = new PackageHistoryEntry()
+        action = PackageHistoryEntry()
         action.Action = PackageHistoryEntry.Action.RATE
         action.PackageMetaData = pack.metadata
         action.Date = datetime.now()
