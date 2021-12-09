@@ -21,6 +21,7 @@ grpcio-status
 gunicorn
 httplib2
 idna
+importlib-metadata
 isort
 itsdangerous
 Jinja2
@@ -44,8 +45,10 @@ requests
 rsa
 six
 toml
+typed-ast
 typing-inspect
 typing_extensions
 urllib3
 Werkzeug
 wrapt
+zipp

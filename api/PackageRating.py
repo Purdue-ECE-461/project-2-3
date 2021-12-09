@@ -1,8 +1,14 @@
+from project1given.src.URL_info import URL_info
+
+
 class PackageRating(object):
     import Packages
     import Package
     import PackageHistoryEntry
     import project1given
+    from project1given import Metrics
+    from project1given import URL_info
+
     self.RampUp = None
     self.Correctness = None
     self.BusFactor = None
@@ -18,11 +24,15 @@ class PackageRating(object):
             return e.set("Malformed request.", 400)
         url = pack.data.URL
         #TODO call scoring here
-        rateObj.RampUp = None
-        rateObj.Correctness = None
-        rateObj.BusFactor = None
-        rateObj.ResponsiveMaintainer = None
-        rateObj.LicenseScore = None
+        repo = URL_info(url = url, token = None)
+        metric = Metrics(repo_data = repo)
+        #metric.runMetrics()
+
+        rateObj.RampUp = metric.runMetrics().rampup_score
+        rateObj.Correctness = metric.runMetrics().correctness_score
+        rateObj.BusFactor = metric.runMetrics().busfactor_score
+        rateObj.ResponsiveMaintainer = metric.runMetrics().responsive_maintainer_score
+        rateObj.LicenseScore =  metric.runMetrics().license_score
         rateObj.GoodPinningPractice = None
         total = None
         

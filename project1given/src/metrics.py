@@ -12,7 +12,7 @@ from correctness import correctness
 
 import logging
 
-class Metrics():
+class Metrics:
 
     gitsrc = None
     repo = None
