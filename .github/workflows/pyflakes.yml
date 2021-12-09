@@ -33,5 +33,4 @@ jobs:
         find ./background -name '*.py' -exec pyflakes {} \;
         find ./optional-kubernetes-engine -name '*.py' -exec pyflakes {} \;
         find ./package_moduleshelf -name '*.py' -exec pyflakes {} \;
-        find ./project1given -name '*.py' -exec pyflakes {} \;
         find ./sessions -name '*.py' -exec pyflakes {} \;
