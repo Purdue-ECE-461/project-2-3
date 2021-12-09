@@ -12,10 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START package_moduleshelf_firestore_client_import]
-from google.cloud import firestore
-# [END package_moduleshelf_firestore_client_import]
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
+# Use the application default credentials
+cred = credentials.Certificate('service_account.json')
+firebase_admin.initialize_app(cred, {
+  'projectId': "ece461-p2-t3",
+})
+
+db = firestore.client()
 
 def document_to_dict(doc):
     if not doc.exists:
@@ -26,8 +33,6 @@ def document_to_dict(doc):
 
 
 def next_page(limit=10, start_after=None):
-    db = firestore.Client()
-
     query = db.collection(u'package_module').limit(limit).order_by(u'name')
 
     if start_after:
@@ -46,7 +51,6 @@ def next_page(limit=10, start_after=None):
 
 def read(package_module_id):
     # [START package_moduleshelf_firestore_client]
-    db = firestore.Client()
     package_module_ref = db.collection(u'package_module').document(package_module_id)
     snapshot = package_module_ref.get()
     # [END package_moduleshelf_firestore_client]
@@ -54,7 +58,6 @@ def read(package_module_id):
 
 
 def update(data, package_module_id=None):
-    db = firestore.Client()
     if(read(package_module_id)==None):
         return None
     package_module_ref = db.collection(u'package_module').document(package_module_id)
@@ -62,7 +65,6 @@ def update(data, package_module_id=None):
     return document_to_dict(package_module_ref.get())
 
 def create(data, package_module_id=None):
-    db = firestore.Client()
     if(read(package_module_id)!=None):
         return None
     package_module_ref = db.collection(u'package_module').document(package_module_id)
@@ -71,14 +73,13 @@ def create(data, package_module_id=None):
 
 
 def delete(id):
-    db = firestore.Client()
     package_module_ref = db.collection(u'package_module').document(id)
     package_module_ref.delete()
 
 def delete_all_package_modules():
     while True:
-        package_modules, _ = self.next_page(limit=50)
+        package_modules, _ = next_page(limit=50)
         if not package_modules:
             break
         for package_module in package_modules:
-            self.delete(package_module['id'])
+            delete(package_module['id'])

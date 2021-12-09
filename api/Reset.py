@@ -1,10 +1,12 @@
 from flask import Flask
-from flask_classful import FlaskView
+from flask_classful import FlaskView, route
+import responses
+import requests
+
+import firestore as Firestore
 app = Flask(__name__)
 class Reset(FlaskView):
-    import firestore
-    import Packages
-    
+    excluded_methods = ['delete_all']
     @route('/reset/')
     def delete(self): #RegistryReset
         auth = None
@@ -13,7 +15,17 @@ class Reset(FlaskView):
             e = Error()
             return e.set("You do not have permission to reset the registry.", 401)
         
-        firestore.delete_all_package_modules()
-        return Packages.delete_all()
+        Firestore.delete_all_package_modules()
+        from Packages import Packages
+        p = Packages()
+        return p.delete_all()
 
 Reset.register(app)
+if __name__ == "__main__" :
+    test = Reset()
+    request = requests.Request("/reset/",
+                       headers={"X-Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"})
+    resp = 200
+    with app.app_context():
+         resp = test.delete()
+    print(resp)

@@ -23,6 +23,9 @@ class PackageRating(FlaskView):
     LicenseScore = None
     GoodPinningPractice = None
     
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)
     @route('/package/<id>/rate')
     def rate_by_ID(self, id):
         rateObj = PackageRating()
@@ -51,4 +54,4 @@ class PackageRating(FlaskView):
         pack.history.append(action)
         
         pack.rating = total
-        return jsonify(rateObj),200
+        return rateObj.toJSON(),200

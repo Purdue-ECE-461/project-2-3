@@ -21,6 +21,9 @@ class PackageData(object):
         self.JSprogram = data["JSprogram"]
         self.URL = data["URL"]
         return self
-        
+    
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)
         
         

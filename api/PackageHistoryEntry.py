@@ -18,3 +18,7 @@ class PackageHistoryEntry(object):
         self.PackageMetadata = data["PackageMetadata"]
         self.Action = data["Action"]
         return self
+    
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)

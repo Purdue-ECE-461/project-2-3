@@ -57,3 +57,4 @@ urllib3
 Werkzeug
 wrapt
 zipp
+firebase-admin

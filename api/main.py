@@ -16,7 +16,7 @@ import logging
 import firestore
 from flask import current_app, flash, Flask, Markup, redirect, render_template
 from flask import request, url_for
-from flask_classful import FlaskView
+from flask_classful import FlaskView, route
 from google.cloud import error_reporting
 import google.cloud.logging
 

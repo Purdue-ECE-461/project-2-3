@@ -1,5 +1,5 @@
 class UserAuthenticationInfo(object):
-    self.password = None
+    password = None
     def get_data():
         return self
     def set_data(data):
