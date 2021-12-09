@@ -1,5 +1,9 @@
-import Flask-RESTful
-class Packages(Resource):
+from flask import Flask
+from flask.ext.classy import FlaskView
+
+app = Flask(__name__)
+
+class Packages(FlaskView):
     import Package
     import PackageQuery
     import Error
@@ -7,6 +11,7 @@ class Packages(Resource):
     self.QueryResult = []
     packageDictionary = {}
     
+    @route('/packages/')
     def post(self): #PackagesList
         auth = None
         auth = request.headers.get("X-Authorization")
@@ -25,23 +30,28 @@ class Packages(Resource):
                         self.QueryResult.append(jsonify(pack))
                         break
                 if s == self.QueryResult.size():
-                    self.QueryResult.append(jsonify({"code": "-1","message": "An unexpected error occurred"},500,))
+                    self.QueryResult.append({"code": -1,"message": "An unexpected error occurred"})
                     return jsonify(self.QueryResult), 500
         return jsonify(self.QueryResult), 200
     
     def static add_package(p):
         packageDictionary[p.metadata.get_ID()] = p
         return
-    def static get_package_by_ID(id):
+    
+    @route('/package/<id>')
+    def get_package_by_ID(self, id):
         if id in packageDictionary.keys():
             return jsonify(packageDictionary[id]), 200
         else:
-            return 400
-    def static get_package_by_Name(Name):
+            return {"code": -1, "message": "An error occurred while retrieving package"}, 500
+    
+    @route('/package/byName/<Name>')
+    def get_package_by_Name(self, Name):
         for id,pack in packageDictionary.items():
             if (pack.metadata.Name == Name):
                 return jsonify(pack.history), 200
         return 400
+    
     def static delete_package(p):
         for ID,pack in packageDictionary.items():
             if (pack == p):

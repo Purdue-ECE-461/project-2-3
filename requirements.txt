@@ -1,10 +1,10 @@
-aniso8601
 astroid
 cachetools
 certifi
 charset-normalizer
 click
 Flask
+Flask-Classy
 google-api-core
 google-auth
 google-cloud-container
@@ -17,7 +17,6 @@ grpc-google-iam-v1
 grpcio
 grpcio-status
 gunicorn
-httplib2
 idna
 isort
 itsdangerous
@@ -29,7 +28,6 @@ mccabe
 mypy-extensions
 nodeenv
 npm
-oauth2client
 optional-django
 platformdirs
 proto-plus
@@ -38,8 +36,6 @@ pyasn1
 pyasn1-modules
 pyflakes
 pylint
-pyparsing
-pytz
 PyYAML
 requests
 rsa
