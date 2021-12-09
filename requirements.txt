@@ -6,7 +6,10 @@ click
 Flask
 Flask-Classy
 google-api-core
+google-api-python-client
 google-auth
+google-auth-httplib2
+google-cloud
 google-cloud-container
 google-cloud-core
 google-cloud-storage
@@ -17,6 +20,7 @@ grpc-google-iam-v1
 grpcio
 grpcio-status
 gunicorn
+httplib2
 idna
 importlib-metadata
 isort
@@ -27,9 +31,6 @@ libcst
 MarkupSafe
 mccabe
 mypy-extensions
-nodeenv
-npm
-optional-django
 platformdirs
 proto-plus
 protobuf
@@ -37,6 +38,7 @@ pyasn1
 pyasn1-modules
 pyflakes
 pylint
+pyparsing
 PyYAML
 requests
 rsa
@@ -45,6 +47,7 @@ toml
 typed-ast
 typing-inspect
 typing_extensions
+uritemplate
 urllib3
 Werkzeug
 wrapt

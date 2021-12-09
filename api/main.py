@@ -13,13 +13,12 @@
 # limitations under the License.
 
 import logging
-
 import firestore
 from flask import current_app, flash, Flask, Markup, redirect, render_template
 from flask import request, url_for
 from flask.ext.classy import FlaskView
+from google.cloud import error_reporting
 import google.cloud.logging
-import storage
 
 import Packages
 import Reset

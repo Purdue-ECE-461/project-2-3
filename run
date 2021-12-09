@@ -7,17 +7,13 @@ then
   source venv/bin/activate
   echo "Installing Dependencies"
   venv/bin/pip install --upgrade pip
-  venv/bin/pip install --upgrade --force-reinstall --no-cache-dir -r requirements.txt
-  nodeenv env
-  env/bin/activate
-  env/bin/npm install npm
-  env/bin/npm install npm-audit-html
-  env/bin/npm audit fix --force
+  venv/bin/pip install --upgrade --force-reinstall --ignore-installed --no-cache-dir -r requirements.txt
   
   curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.1-linux-x86_64.tar.gz
   tar -xf google-cloud-sdk-365.0.1-linux-x86_64.tar.gz
   ./google-cloud-sdk/install.sh -q
-  ./google-cloud-sdk/bin/gcloud config configurations activate default
+  ./google-cloud-sdk/bin/gcloud config set compute/zone us-east1-c
+  ./google-cloud-sdk/bin/gcloud init
   
   bash -c "venv/bin/pip freeze -l | sed 's/==.*//g'" > requirements.txt
   echo "Dependencies Installed"
@@ -32,12 +28,12 @@ then
   source venv/bin/activate
   bash -c "TZ=UTC date +'/%Y-%m-%d %H:%M:/,\$p' > date.txt"
   
-  sed 's/"title": "ECE 461 - Fall 2021 - Project 2.paw",/"title": "ECE 461 - Fall 2021 - Project 2",/' apiImported.json | sed '8,9d' | sed 's/"version": "v0\.0\.0"/"version": "v1\.0\.0"/' | sed 's/"schemes": \[/"host": "ece461-p2-t3.appspot.com",/' | sed 's/"basePath": "\/",/"basePath": "\/v1",/' > api/api.json
+  sed 's/"title": "ECE 461 - Fall 2021 - Project 2.paw",/"title": "ECE 461 - Fall 2021 - Project 2",/' apiImported.json | sed '8,9d' | sed 's/"version": "v0\.0\.0"/"version": "v1\.0\.0"/' | sed 's/"schemes": \[/"host": "ece461-p2-t3.appspot.com",/' | sed 's/"basePath": "\/",/"basePath": "\/",/' > api/api.json
   
   bash -c "./google-cloud-sdk/bin/gcloud endpoints services deploy api/api.json" 2> deployLogapiout.txt 1> deployLogapisuccess.txt
   awk '{gsub(/\\n/,"\n")}1' deployLogapiout.txt > deployLogapioutpretty.txt
   
-  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml ./api/apiAppEngine.yaml --version=v1 --promote --quiet --stop-previous-version
+  ./google-cloud-sdk/bin/gcloud app deploy ./package_moduleshelf/app.yaml ./api/apiAppEngine.yaml --promote --quiet --stop-previous-version
   
   ./google-cloud-sdk/bin/gcloud app logs read --limit=100 > deployLog.txt
   sed -f date.txt -n deployLog.txt > deployLogRecent.txt
@@ -51,7 +47,6 @@ then
   rm date.txt
   rm deployLog*
   rm -rf venv
-  rm -rf env
   rm -rf packageTemp
   rm -rf google-cloud-sdk
   rm -rf google-cloud-sdk-*.tar.*
