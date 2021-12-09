@@ -34,5 +34,4 @@ jobs:
         find ./background -name '*.py' -exec bandit -q -r {} \;
         find ./optional-kubernetes-engine -name '*.py' -exec bandit -q -r {} \;
         find ./package_moduleshelf -name '*.py' -exec bandit -q -r {} \;
-        find ./project1given -name '*.py' -exec bandit -q -r {} \;
         find ./sessions -name '*.py' -exec bandit -q -r {} \;
