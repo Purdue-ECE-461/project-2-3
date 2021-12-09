@@ -3,12 +3,12 @@ import requests
 import os
 script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
 
-from gitclone import clone, cleartemp
-from rampup import rampup
-from busfactor import busFactor
-from responseMaintainer import responseMaintainer
-from licensing import licensing
-from correctness import correctness
+from project1given.src.gitclone import clone, cleartemp
+from project1given.src.rampup import rampup
+from project1given.src.busfactor import busFactor
+from project1given.src.responseMaintainer import responseMaintainer
+from project1given.src.licensing import licensing
+from project1given.src.correctness import correctness
 
 import logging
 
