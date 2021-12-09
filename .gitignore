@@ -46,3 +46,4 @@ packageTemp/
 *.tar.*
 date.txt
 deployLog*
+service_account.json
