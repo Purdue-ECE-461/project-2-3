@@ -13,6 +13,15 @@ class SemverRange(object):
 
         return versions
 
+    def calcVersion(self, versions):
+        permittedVersions = ()
+        for i in versions:
+            if versions[i][0] == '^':
+                majorminorpatch = versions[i][1:] #x.y.z
+            if versions[i][0] == "~":
+                majorminorpatch = versions[i][1:] 
+                #permittedVersions = 
+
     # while True:
     #     verMajor = None
     #     verMinor = None
