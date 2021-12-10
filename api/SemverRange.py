@@ -5,10 +5,10 @@ import json
 
 class SemverRange(object):
 
-    def get_versions (self) :
+    def get_versions (self, zipname="underscore") :
         semver_unzip = ZipUnzip()
-        semver_unzip.file_unzip("underscore-master.zip")
-        semver_json = json.load(open("packageTemp/underscore-master/package.json", "r"))
+        semver_unzip.file_unzip(zipname + ".zip")
+        semver_json = json.load(open("packageTemp/" + zipname + "/package.json", "r"))
         versions = list(semver_json["devDependencies"].values())
 
         return versions

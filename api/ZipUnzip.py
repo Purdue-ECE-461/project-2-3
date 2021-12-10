@@ -81,7 +81,7 @@ class ZipUnzip :
 if __name__ == "__main__" :
     test = ZipUnzip()
     test.file_zip()
-    encoded = test.base64Encode("packages/underscore-master.zip")
+    encoded = test.base64Encode("packages/underscore.zip")
     with open("b64test.txt", 'wb') as file:
         file.write(encoded)
     decoded = test.base64Decode("b64test.txt")
