@@ -19,3 +19,4 @@ pytest
 GitPython
 pytest-json-report
 coverage
+firebase_admin

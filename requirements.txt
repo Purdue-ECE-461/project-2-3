@@ -1,9 +1,11 @@
 appier
 astroid
+CacheControl
 cachetools
 certifi
 charset-normalizer
 click
+firebase-admin
 Flask
 Flask-Classful
 google-api
@@ -33,6 +35,7 @@ lazy-object-proxy
 libcst
 MarkupSafe
 mccabe
+msgpack
 mypy-extensions
 packaging
 platformdirs
@@ -57,4 +60,3 @@ urllib3
 Werkzeug
 wrapt
 zipp
-firebase-admin
