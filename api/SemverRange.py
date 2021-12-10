@@ -1,10 +1,12 @@
 import package_moduleshelf
 import semver
-
+from ZipUnzip import ZipUnzip
 
 class SemverRange(object):
     #assuming object is txt file
-    file1 = open('requirements.txt', 'r')
+    zipun = ZipUnzip()
+    zipun.file_unzip("underscore-master.zip")
+    file1 = open('packageTemp/underscore/package.json', 'r')
     count = 0 #line number
 
     while True:
@@ -20,7 +22,7 @@ class SemverRange(object):
             if lines[count][x] == "=" & lines[count][x + 1] == "=":
                 ver = semver.Version.parse(lines[count][x:])
                 verMajor = ver.major
-                verMinor = ver,minor
-                verPatch = ver.patch             
-
+                verMinor = ver.minor
+                verPatch = ver.patch
+                
         count += 1
