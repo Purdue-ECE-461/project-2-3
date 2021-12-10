@@ -1,28 +1,36 @@
-import package_moduleshelf
-import semver
+# import package_moduleshelf
+# import semver
 from ZipUnzip import ZipUnzip
+import json
 
 class SemverRange(object):
-    #assuming object is txt file
-    zipun = ZipUnzip()
-    zipun.file_unzip("underscore-master.zip")
-    file1 = open('packageTemp/underscore/package.json', 'r')
-    count = 0 #line number
 
-    while True:
-        verMajor = None
-        verMinor = None
-        verPatch = None
+    def get_versions (self) :
+        semver_unzip = ZipUnzip()
+        semver_unzip.file_unzip("underscore-master.zip")
+        semver_json = json.load(open("packageTemp/underscore-master/package.json", "r"))
+        versions = list(semver_json["devDependencies"].values())
 
-        lines = file1.readlines()
-        if not lines:
-            break
+        return versions
 
-        for x in lines:
-            if lines[count][x] == "=" & lines[count][x + 1] == "=":
-                ver = semver.Version.parse(lines[count][x:])
-                verMajor = ver.major
-                verMinor = ver.minor
-                verPatch = ver.patch
+    # while True:
+    #     verMajor = None
+    #     verMinor = None
+    #     verPatch = None
+
+    #     lines = file1.readlines()
+    #     if not lines:
+    #         break
+
+    #     for x in lines:
+    #         if lines[count][x] == "=" & lines[count][x + 1] == "=":
+    #             ver = semver.Version.parse(lines[count][x:])
+    #             verMajor = ver.major
+    #             verMinor = ver.minor
+    #             verPatch = ver.patch
                 
-        count += 1
+    #     count += 1
+
+if __name__ == "__main__" :
+    test = SemverRange()
+    print(test.get_versions())
