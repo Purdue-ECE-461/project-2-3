@@ -15,7 +15,6 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-
 # Use the application default credentials
 cred = credentials.Certificate('service_account.json')
 firebase_admin.initialize_app(cred, {
@@ -61,11 +60,13 @@ def update(data, package_module_id=None):
     if(read(package_module_id)==None):
         return None
     package_module_ref = db.collection(u'package_module').document(package_module_id)
-    package_module_ref.set(data)
+    package_module_ref.update(data)
     return document_to_dict(package_module_ref.get())
 
 def create(data, package_module_id=None):
     if(read(package_module_id)!=None):
+        print("firestore package exists")
+        print(read(package_module_id))
         return None
     package_module_ref = db.collection(u'package_module').document(package_module_id)
     package_module_ref.set(data)

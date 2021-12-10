@@ -26,7 +26,7 @@ class Packages(FlaskView):
         if(auth == None):
             e = Error()
             return e.set("Malformed request.", 400)
-        self.QueryArray.append(json.loads(str(request.json)))
+        self.QueryArray.append(json.loads(str(request.json), strict=False))
         self.QueryResult = []
         for query in self.QueryArray:
             if query['Name'] == "*":
@@ -43,7 +43,7 @@ class Packages(FlaskView):
         return jsonify(self.QueryResult), 200
     
     def add_package(self, p):
-        packageDictionary[p.metadata.get_ID()] = p
+        self.packageDictionary[p.metadata.get_ID()] = p
         return
     
     @route('/package/<id>')

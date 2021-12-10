@@ -1,29 +1,42 @@
+import json
 class PackageData(object):
-    import firestore
     from flask import request
     Content = None
-    JSprogram = None
+    JSProgram = None
     URL = None
     
-    def get_data(ID):
-        data = firestore.read(ID)
+    def get_data(self, ID):
+        import firestore as Firestore
+        data = Firestore.read(ID)
         if(data == None):
             return None
-        self.Content = data["content"]
-        self.JSprogram = data["JSprogram"]
+        self.Content = data["Content"]
+        self.JSProgram = data["JSProgram"]
         self.URL = data["URL"]
         return self
     
-    def set_data(data, ID):
-        if(firestore.update(data, ID) == None):
+    def set_data(self, data, ID):
+        import firestore as Firestore
+        data = json.loads(str(data), strict=False)
+        if(Firestore.update(data, ID) == None):
             return None
-        self.Content = data["content"]
-        self.JSprogram = data["JSprogram"]
-        self.URL = data["URL"]
+        try:
+            self.Content = data["Content"]
+        except:
+            pass
+        try:
+            self.JSProgram = data["JSProgram"]
+        except:
+            pass
+        try:
+            self.URL = data["URL"]
+        except:
+            pass
         return self
     
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, 
+        j = json.dumps(self, default=lambda o: o.__dict__, 
             sort_keys=True, indent=4)
+        return json.loads(str(j), strict=False)
         
         

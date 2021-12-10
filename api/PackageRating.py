@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_classful import FlaskView, route
+import json
 app = Flask(__name__)
 class PackageRating(FlaskView):
     import Packages
@@ -29,21 +30,32 @@ class PackageRating(FlaskView):
     @route('/package/<id>/rate')
     def rate_by_ID(self, id):
         rateObj = PackageRating()
-        pack = Packages.packageDictionary[id]
+        from Packages import Packages
+        pacs = Packages()
+        pack = pacs.packageDictionary[id]
         if pack == None:
+            from Error import Error
             e = Error()
             return e.set("Malformed request.", 400)
         url = pack.data.URL
         #TODO call scoring here
+        from project1given.src.busfactor import busFactor
+        from project1given.src.correctness import correctness
+        from project1given.src.gitclone import clone
+        from project1given.src.URL_info import URL_info
+        from project1given.src.licensing import licensing
+        from project1given.src.metrics import Metrics
+        from project1given.src.rampup import rampup
         repo = URL_info(url = url, token = None)
         metric = Metrics(repo_data = repo)
-        #metric.runMetrics()
-
-        rateObj.RampUp = metric.runMetrics().rampup_score
-        rateObj.Correctness = metric.runMetrics().correctness_score
-        rateObj.BusFactor = metric.runMetrics().busfactor_score
-        rateObj.ResponsiveMaintainer = metric.runMetrics().responsive_maintainer_score
-        rateObj.LicenseScore =  metric.runMetrics().license_score
+        metric.runMetrics()
+        print(metric.json_final_obj)
+        runMetrics = json.loads(str(metric.json_final_obj), strict=False)
+        rateObj.RampUp = runMetrics['Ramp Up Score']
+        rateObj.Correctness = runMetrics['Correctness Score']
+        rateObj.BusFactor = runMetrics['Bus Factor Score']
+        rateObj.ResponsiveMaintainer = runMetrics['Reponsiveness Score']
+        rateObj.LicenseScore =  runMetrics['License Score']
         rateObj.GoodPinningPractice = None
         total = None
         

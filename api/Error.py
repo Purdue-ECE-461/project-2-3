@@ -5,7 +5,7 @@ class Error(object):
     def get(self):
         return {'message': message}, code
     
-    def set(message, code):
+    def set(self, message, code):
         self.message = message
         self.code = code
         return {'message': message}, code
