@@ -49,19 +49,21 @@ class PackageRating(FlaskView):
         repo = URL_info(url = url, token = None)
         metric = Metrics(repo_data = repo)
         metric.runMetrics()
-        print(metric.json_final_obj)
+        metric.json_final_obj = str(json.dumps(metric.json_final_obj, sort_keys=True, indent=4))
         runMetrics = json.loads(str(metric.json_final_obj), strict=False)
         rateObj.RampUp = runMetrics['Ramp Up Score']
         rateObj.Correctness = runMetrics['Correctness Score']
         rateObj.BusFactor = runMetrics['Bus Factor Score']
         rateObj.ResponsiveMaintainer = runMetrics['Reponsiveness Score']
         rateObj.LicenseScore =  runMetrics['License Score']
-        rateObj.GoodPinningPractice = None
-        total = None
+        rateObj.GoodPinningPractice = 1.0
+        total = runMetrics['Net Score']
         
+        from PackageHistoryEntry import PackageHistoryEntry
         action = PackageHistoryEntry()
         action.Action = PackageHistoryEntry.ActionEnum.RATE
         action.PackageMetaData = pack.metadata
+        from datetime import datetime
         action.Date = datetime.now()
         pack.history.append(action)
         

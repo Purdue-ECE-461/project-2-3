@@ -63,13 +63,13 @@ class Packages(FlaskView):
     def delete_package(self, p):
         for ID,pack in self.packageDictionary.items():
             if (pack == p):
-                del self.packageDictionary[id]
+                del self.packageDictionary[ID]
                 return 200
         return 400
     
     def delete_all(self):
         for ID,pack in self.packageDictionary.items():
-            del self.packageDictionary[id]
+            del self.packageDictionary[ID]
         return 200
     
 Packages.register(app)

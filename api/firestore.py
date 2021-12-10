@@ -32,11 +32,11 @@ def document_to_dict(doc):
 
 
 def next_page(limit=10, start_after=None):
-    query = db.collection(u'package_module').limit(limit).order_by(u'name')
+    query = db.collection(u'package_module').limit(limit).order_by(u'Name')
 
     if start_after:
         # Construct a new query starting at this document.
-        query = query.start_after({u'name': start_after})
+        query = query.start_after({u'Name': start_after})
 
     docs = query.stream()
     docs = list(map(document_to_dict, docs))
@@ -44,7 +44,7 @@ def next_page(limit=10, start_after=None):
     last_name = None
     if limit == len(docs):
         # Get the last document from the results and set as the last name.
-        last_name = docs[-1][u'name']
+        last_name = docs[-1][u'Name']
     return docs, last_name
 
 
