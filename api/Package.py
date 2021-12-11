@@ -185,5 +185,6 @@ if __name__ == "__main__" :
     resp = 200
     with app.app_context():
          resp = test.post()
+    print(test.rating)
     print(resp)
      

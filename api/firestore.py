@@ -15,8 +15,20 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+from ZipUnzip import ZipUnzip
+import base64
+import zipfile
+import tarfile
+import shutil
+import os
+import time
+from pathlib import Path
 # Use the application default credentials
-cred = credentials.Certificate('service_account.json')
+zz = ZipUnzip()
+decoded = zz.base64Decode("service_account.txt")
+with open("/tmp/service_account.json", 'w+b') as file:
+    file.write(decoded)
+cred = credentials.Certificate('/tmp/service_account.json')
 firebase_admin.initialize_app(cred, {
   'projectId': "ece461-p2-t3",
 })
@@ -84,3 +96,10 @@ def delete_all_package_modules():
             break
         for package_module in package_modules:
             delete(package_module['id'])
+
+
+if __name__ == "__main__" :
+    zz = ZipUnzip()
+    encoded = zz.base64Encode("service_account.json")
+    with open("api/service_account.txt", 'w+b') as file:
+        file.write(encoded)

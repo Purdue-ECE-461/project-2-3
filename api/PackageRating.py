@@ -6,6 +6,7 @@ class PackageRating(FlaskView):
     import Packages
     import Package
     import PackageHistoryEntry
+    import SemverRange
     import project1given
     import project1given.src
     import project1given.src.busfactor
@@ -46,7 +47,7 @@ class PackageRating(FlaskView):
         from project1given.src.licensing import licensing
         from project1given.src.metrics import Metrics
         from project1given.src.rampup import rampup
-        repo = URL_info(url = url, token = None)
+        repo = URL_info(url = url, token = "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")
         metric = Metrics(repo_data = repo)
         metric.runMetrics()
         metric.json_final_obj = str(json.dumps(metric.json_final_obj, sort_keys=True, indent=4))
@@ -56,9 +57,17 @@ class PackageRating(FlaskView):
         rateObj.BusFactor = runMetrics['Bus Factor Score']
         rateObj.ResponsiveMaintainer = runMetrics['Reponsiveness Score']
         rateObj.LicenseScore =  runMetrics['License Score']
-        rateObj.GoodPinningPractice = 1.0
+        from SemverRange import SemverRange
+        svr = SemverRange()
+        versions = svr.get_versions()
+        rateObj.GoodPinningPractice = svr.parse_versions(versions)
+        # from project1given:
+        #  net_score = ((0.25 * rampup_score) + (0.15 * correctness_score)+ (0.35 * bus_factor_score) + (0.25 * responsive_maintainer_score)) * license_score
         total = runMetrics['Net Score']
-        
+        if total != 0:
+            total = 0.9*total + 0.1*rateObj.GoodPinningPractice
+        # new total is:
+        #  total = ((0.25*0.9 * rampup_score) + (0.15*0.9 * correctness_score) + (0.35*0.9 * bus_factor_score) + (0.25*0.9 * responsive_maintainer_score) + (0.1 * goodpinningpractice)) * license_score
         from PackageHistoryEntry import PackageHistoryEntry
         action = PackageHistoryEntry()
         action.Action = PackageHistoryEntry.ActionEnum.RATE

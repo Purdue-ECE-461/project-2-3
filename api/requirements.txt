@@ -1,3 +1,4 @@
+appengine-python-standard
 Flask
 flask-classful
 google-api
@@ -20,3 +21,4 @@ GitPython
 pytest-json-report
 coverage
 firebase_admin
+uwsgi

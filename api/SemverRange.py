@@ -2,44 +2,38 @@
 # import semver
 from ZipUnzip import ZipUnzip
 import json
+import re
 
 class SemverRange(object):
 
-    def get_versions (self, zipname="underscore") :
+    def get_versions(self, zipname="underscore-master"):
         semver_unzip = ZipUnzip()
         semver_unzip.file_unzip(zipname + ".zip")
         semver_json = json.load(open("packageTemp/" + zipname + "/package.json", "r"))
         versions = list(semver_json["devDependencies"].values())
-
         return versions
-
-    def calcVersion(self, versions):
-        permittedVersions = ()
-        for i in versions:
-            if versions[i][0] == '^':
-                majorminorpatch = versions[i][1:] #x.y.z
-            if versions[i][0] == "~":
-                majorminorpatch = versions[i][1:] 
-                #permittedVersions = 
-
-    # while True:
-    #     verMajor = None
-    #     verMinor = None
-    #     verPatch = None
-
-    #     lines = file1.readlines()
-    #     if not lines:
-    #         break
-
-    #     for x in lines:
-    #         if lines[count][x] == "=" & lines[count][x + 1] == "=":
-    #             ver = semver.Version.parse(lines[count][x:])
-    #             verMajor = ver.major
-    #             verMinor = ver.minor
-    #             verPatch = ver.patch
-                
-    #     count += 1
-
+    
+    def parse_versions(self, versions):
+        if not versions:
+            return 1.0
+        count = 0.0
+        for v in versions:
+            m = re.search("^(~|\^)?(\d+)(\.(\d+)(\.(\d+))?)?",v)
+            if m == None:
+                print("unable to parse dependency version: " + v)
+                continue
+            verAdvRange = m.group(1)
+            verMajor = m.group(2)
+            verMinor = m.group(4)
+            verPatch = m.group(6)
+            if (verAdvRange == "~") and (verMinor != None):
+                count = count + 1
+                continue
+            if (verAdvRange == "^") and (verMajor == "0"):
+                count = count + 1
+        rating = count/len(versions)
+        return rating
 if __name__ == "__main__" :
     test = SemverRange()
-    print(test.get_versions())
+    versions = test.get_versions()
+    print(test.parse_versions(versions))

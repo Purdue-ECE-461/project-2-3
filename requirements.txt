@@ -8,6 +8,8 @@ click
 firebase-admin
 Flask
 Flask-Classful
+gitdb
+GitPython
 google-api
 google-api-core
 google-api-python-client
@@ -37,7 +39,9 @@ MarkupSafe
 mccabe
 msgpack
 mypy-extensions
+numpy
 packaging
+pandas
 platformdirs
 proto-plus
 protobuf
@@ -46,11 +50,14 @@ pyasn1-modules
 pyflakes
 pylint
 pyparsing
+python-dateutil
+pytz
 PyYAML
 requests
 responses
 rsa
 six
+smmap
 toml
 typed-ast
 typing-inspect
