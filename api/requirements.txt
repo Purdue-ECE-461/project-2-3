@@ -1,6 +1,5 @@
 appengine-python-standard
 Flask
-flask-classful
 google-api
 google-api-core
 google-api-python-client
@@ -15,10 +14,9 @@ six
 requests
 responses
 pandas
-requests
 pytest
+gitdb
 GitPython
 pytest-json-report
 coverage
 firebase_admin
-uwsgi

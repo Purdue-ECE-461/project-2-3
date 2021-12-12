@@ -1,5 +1,3 @@
-# import package_moduleshelf
-# import semver
 from ZipUnzip import ZipUnzip
 import json
 import re

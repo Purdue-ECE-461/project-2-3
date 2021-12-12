@@ -2,9 +2,8 @@ from flask import Flask, request, jsonify
 import responses
 import requests
 import json
-from flask_classful import FlaskView, route
 app = Flask(__name__)
-class Package(FlaskView):
+class Package(object):
     import firestore as Firestore
     import datetime
     from MetaData import MetaData
@@ -19,131 +18,23 @@ class Package(FlaskView):
     history = []
     rating = None
     
-    def delete(self): #packageDelete
-        import firestore as Firestore
-        from Packages import Packages
-        Firestore.delete(self.metadata.get_ID())
-        paks = Packages()
-        return paks.delete_package(p = self)
-    
-    @route('/package/')
-    def get(self): #PackageRetrieve
-        self.metadata = self.metadata.get_data()
-        self.data = self.data.get_data(self.metadata.get_ID())
-        return {'MetaData': self.metadata, 'PackageData': self.data}, 200
-    
-    def post(self): #PackageCreate
-        auth = None
-        auth = request.headers.get("X-Authorization")
-        if(auth == None):
-            from Error import Error
-            e = Error()
-            return e.set("Malformed request.", 400)
-        jsonResponse = json.loads(str(request.json), strict=False)
-        
-        prevmeta = self.metadata
-        self.metadata = self.metadata.set_data(str(
-                json.dumps(jsonResponse["metadata"])))
-        if(self.metadata == None):
-            from MetaData import MetaData
-            self.metadata = MetaData()
-            self.metadata = self.metadata.set_data(prevmeta.toJSON())
-            from Error import Error
-            e = Error()
-            return e.set("Package exists already.", 403)
-        if(self.metadata.Name == None or self.metadata.Version == None or self.metadata.get_ID() == None):
-            self.metadata = self.metadata.set_data(prevmeta.toJSON())
-            from Error import Error
-            e = Error()
-            return e.set("Malformed request.", 400)
-        
-        prevdata = self.data
-        self.data = self.data.set_data(str(
-                json.dumps(jsonResponse["data"])), self.metadata.get_ID())
-        if(self.data == None):
-            from PackageData import PackageData
-            self.data = PackageData()
-            self.data = self.data.set_data(prevdata.toJSON(), self.metadata.get_ID())
-            return {"code": -1, "message": "An error occurred while retrieving package"}, 500
-        if(self.data.Content == None and self.data.URL == None):
-            self.data = self.data.set_data(prevdata.toJSON(), self.metadata.get_ID())
-            from Error import Error
-            e = Error()
-            return e.set("Malformed request.", 400)
-        if (self.data.Content == None): #packageIngest
-            self.data.Content = prevdata.Content
-            import firestore as Firestore
-            Firestore.update(self.data.toJSON(), self.metadata.get_ID())
-        if (self.data.URL == None): #packageIngest
-            self.data.URL = prevdata.URL
-            import firestore as Firestore
-            Firestore.update(self.data.toJSON(), self.metadata.get_ID())
-        
-        from PackageHistoryEntry import PackageHistoryEntry
-        action = PackageHistoryEntry()
-        action.Action = PackageHistoryEntry.ActionEnum.CREATE
-        action.PackageMetaData = self.metadata
-        from datetime import datetime
-        action.Date = datetime.now()
-        self.history.append(action)
-        from Packages import Packages
-        pacs = Packages()
-        pacs.add_package(p = self)
-        if self.data.URL != None:
-            from PackageRating import PackageRating
-            pr = PackageRating()
-            rateresponse = pr.rate_by_ID(id = self.metadata.get_ID())
-            if rateresponse[1] != 200:
-                self.delete()
-                return rateresponse
-            if self.rating < 0.5:
-                self.delete()
-                from Error import Error
-                e = Error()
-                return e.set("package recieved bad rating", 400)
-            
-        return self.metadata.toJSON(), 201
-    
-    def put(self): #PackageUpdate
-        auth = None
-        auth = request.headers.get("X-Authorization")
-        if(auth == None):
-            from Error import Error
-            e = Error()
-            return e.set("Malformed request.", 400)
-        jsonResponse = json.loads(str(request.json), strict=False)
-        
-        if (self.metadata.Name != jsonResponse['metadata']["Name"]) or (self.metadata.Version != jsonResponse['metadata']["Version"]) or (self.metadata.ID != jsonResponse['metadata']["ID"]):
-            return 400
-        
-        prevdata = self.data
-        self.data = self.data.set_data(jsonResponse['data'], self.metadata.get_ID())
-        if(self.data == None):
-            self.data = self.data.set_data(prevdata.toJSON(), self.metadata.get_ID())
-            return 400
-        
-        from Packages import Packages
-        Packages.delete_package(self)#delete old version based on metadata
-        from PackageHistoryEntry import PackageHistoryEntry
-        action = PackageHistoryEntry()
-        action.Action = PackageHistoryEntry.ActionEnum.UPDATE
-        action.PackageMetaData = self.metadata
-        from datetime import datetime
-        action.Date = datetime.now()
-        self.history.append(action)
-        Packages.add_package(self)#add new version
-        return 201
-        
-        def toJSON(self):
-            return json.dumps(self, default=lambda o: o.__dict__, 
-                sort_keys=True, indent=4)
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)
 
-        def __eq__(self, obj):
-            return self.metadata == obj.metadata
-        
-Package.register(app)
+    def __eq__(self, obj):
+        if(obj == None):
+            if ((not self) or self.metadata == None):
+                return True
+            else:
+                return False
+        return self.metadata == obj.metadata
+    
+    def __str__(self):
+        return self.toJSON()
+    
 if __name__ == "__main__" :
-    test = Package()
+    from main import packageCreate
     jcreate = '''
     {
     	"metadata": {
@@ -175,16 +66,20 @@ if __name__ == "__main__" :
     request = r
     resp = 200
     with app.app_context():
-         resp = test.post()
+         resp = packageCreate()
     print(resp)
-    test.delete()
+    if resp[1] == 201:
+        resp = packageDelete(json.loads(str(resp[0]), strict=False)["ID"])
+        if resp != 200:
+            print("delete failed")
+    
     r = requests.Request("/packages/",
                        headers={"X-Authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"},
                        json=jingest)
     request = r
     resp = 200
     with app.app_context():
-         resp = test.post()
+         resp = packageCreate()
     print(test.rating)
     print(resp)
      

@@ -10,9 +10,18 @@ class PackageData(object):
         data = Firestore.read(ID)
         if(data == None):
             return None
-        self.Content = data["Content"]
-        self.JSProgram = data["JSProgram"]
-        self.URL = data["URL"]
+        try:
+            self.Content = data["Content"]
+        except:
+            pass
+        try:
+            self.JSProgram = data["JSProgram"]
+        except:
+            pass
+        try:
+            self.URL = data["URL"]
+        except:
+            pass
         return self
     
     def set_data(self, data, ID):

@@ -1,5 +1,2 @@
 runtime: python38
 service: api
-instance_class: F4_HIGHMEM
-app_engine_apis: true
-entrypoint: uwsgi --http-socket :$PORT --wsgi-file main.py --callable app --master

@@ -7,7 +7,6 @@ charset-normalizer
 click
 firebase-admin
 Flask
-Flask-Classful
 gitdb
 GitPython
 google-api
@@ -16,9 +15,12 @@ google-api-python-client
 google-auth
 google-auth-httplib2
 google-cloud
+google-cloud-appengine-logging
+google-cloud-audit-log
 google-cloud-container
 google-cloud-core
 google-cloud-firestore
+google-cloud-logging
 google-cloud-storage
 google-crc32c
 google-resumable-media
@@ -29,7 +31,6 @@ grpcio-status
 gunicorn
 httplib2
 idna
-importlib-metadata
 isort
 itsdangerous
 Jinja2
@@ -59,11 +60,9 @@ rsa
 six
 smmap
 toml
-typed-ast
 typing-inspect
 typing_extensions
 uritemplate
 urllib3
 Werkzeug
 wrapt
-zipp

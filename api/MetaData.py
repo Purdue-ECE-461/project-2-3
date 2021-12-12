@@ -33,8 +33,9 @@ class MetaData(object):
         return self.ID
     
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, 
+        j = json.dumps(self, default=lambda o: o.__dict__, 
             sort_keys=True, indent=4)
+        return json.loads(str(j), strict=False)
     def __eq__(self, obj):
         if(obj == None):
             if (self.Name == None) and (self.Version == None) and (self.ID == None):

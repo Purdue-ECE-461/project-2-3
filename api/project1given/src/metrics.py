@@ -1,7 +1,6 @@
 import json
 import requests
 import os
-script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
 
 from project1given.src.gitclone import clone, cleartemp
 from project1given.src.rampup import rampup
@@ -16,7 +15,7 @@ class Metrics:
 
     gitsrc = None
     repo = None
-    filepath = os.path.join(script_dir, "./temp")
+    filepath = "/tmp/temp"
 
     def __init__(self, repo_data):
         self.repo = repo_data
@@ -80,11 +79,7 @@ class Metrics:
        ############################# 
 
     def createDirectory(self):
-        try:
-            os.makedirs(self.filepath)
-        except FileExistsError:
-            # directory already exists
-            pass
+        os.makedirs(self.filepath, exist_ok=True)
         clone(self.gitsrc["clone_url"], self.filepath)
 
     def deleteDirectory(self):
