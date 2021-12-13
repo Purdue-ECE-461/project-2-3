@@ -32,7 +32,7 @@ class ZipUnzip :
     
     # This code pulled from https://stackoverflow.com/questions/185936/how-to-delete-the-contents-of-a-folder
     def clean (self) :
-        folder = 'packageTemp'
+        folder = 'tmp/packageTemp'
 
         for filename in os.listdir(folder) :
             file_path = os.path.join(folder, filename)
@@ -48,13 +48,13 @@ class ZipUnzip :
        
     def file_zip (self) :
         entry = " "
-        for directory in os.walk("packageTemp") :
+        for directory in os.walk("tmp/packageTemp") :
             entry = directory
         path = entry[0]
         filename = entry[0].split("\\")[-1]
         try :
             shutil.make_archive(filename, "zip", path)
-            shutil.move(filename + ".zip", "packageTemp")
+            shutil.move(filename + ".zip", "tmp/packageTemp")
             print("Archive created!")
         except Exception as e:
             print('Archive could not be created. Reason: %s' % e)
@@ -65,7 +65,7 @@ class ZipUnzip :
 
         if filetype == self.has_zip :
             unzipper = zipfile.ZipFile("packages/" + filename, "r")
-            unzipper.extractall("packageTemp")
+            unzipper.extractall("tmp/packageTemp")
             print("Package extracted!")
 
             return True

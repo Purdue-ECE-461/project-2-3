@@ -16,7 +16,6 @@ class Metrics:
     gitsrc = None
     repo = None
     filepath = "/tmp/temp"
-
     def __init__(self, repo_data):
         self.repo = repo_data
         self.gitsrc = repo_data.data
@@ -75,7 +74,6 @@ class Metrics:
                 'Reponsiveness Score': responsive_maintainer_score,
                 'License Score': license_score
                 }
-        self.deleteDirectory()
        ############################# 
 
     def createDirectory(self):

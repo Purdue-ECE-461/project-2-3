@@ -77,7 +77,6 @@ def update(data, package_module_id=None):
 
 def create(data, package_module_id=None):
     if(read(package_module_id)!=None):
-        print("firestore package exists")
         print(read(package_module_id))
         return None
     package_module_ref = db.collection(u'package_module').document(package_module_id)

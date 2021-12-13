@@ -4,7 +4,8 @@ import requests
 import json
 import Package
 import PackageQuery
-import Error
+from Error import Error
+e = Error()
 import firestore as Firestore
 
 app = Flask(__name__)
@@ -34,8 +35,8 @@ class Packages(object):
     def delete_package(self, id):
         if id in self.packageDictionary:
             del self.packageDictionary[id]
-            return 200
-        return e.malformed()
+            return {'message': "success"}, 200
+        return e.set("Package does not exist.", 400)
     
     def delete_all(self):
         self.packageDictionary = dict()

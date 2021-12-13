@@ -1,13 +1,14 @@
 from ZipUnzip import ZipUnzip
 import json
 import re
+import glob
 
 class SemverRange(object):
 
-    def get_versions(self, zipname="underscore-master"):
-        semver_unzip = ZipUnzip()
-        semver_unzip.file_unzip(zipname + ".zip")
-        semver_json = json.load(open("packageTemp/" + zipname + "/package.json", "r"))
+    def get_versions(self):
+        filepath = glob.glob('/tmp/**/package.json', 
+                   recursive = True)
+        semver_json = json.load(open(filepath[0], "r"))
         versions = list(semver_json["devDependencies"].values())
         return versions
     

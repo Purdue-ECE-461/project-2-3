@@ -16,10 +16,16 @@ class Package(object):
     data = PackageData()
     metadata = MetaData()
     history = []
-    rating = None
+    rating = 0
     
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, 
+        m = str(self.metadata.toJSON())
+        d = str(self.data.toJSON())
+        h = str(json.dumps(self.history))
+        r = str(json.dumps(str(self.rating)))
+        j = str(json.dumps(m+d))
+        j = str(json.dumps(j+r+h))
+        return json.dumps(j, default=lambda o: o.__dict__, 
             sort_keys=True, indent=4)
 
     def __eq__(self, obj):

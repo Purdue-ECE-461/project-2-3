@@ -12,5 +12,5 @@ class Error(object):
     
     def malformed(self):
         return self.set("Malformed request.", 400)
-    def unexpected():
+    def unexpected(self):
         return {"code": -1, "message": "An error occurred while retrieving package"}, 500
