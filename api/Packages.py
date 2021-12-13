@@ -18,13 +18,9 @@ class Packages(object):
         from Package import Package
         package_modules, _ = Firestore.next_page()
         for package_module in package_modules:
-            packdict = Firestore.read(package_module['id'])
             pack = Package()
-            pack.metadata.ID = packdict['id']
-            pack.metadata.Name = packdict[u'Name']
-            pack.metadata.Version = packdict[u'Version']
-            Firestore.update(pack.metadata.toJSON(), pack.metadata.get_ID())
-            pack.data = pack.data.get_data(pack.metadata.get_ID())
+            pack.metadata.ID = package_module['id']
+            pack = pack.get_self(package_module['id'])
             self.packageDictionary[pack.metadata.get_ID()] = pack
         return self
 
@@ -36,7 +32,7 @@ class Packages(object):
         if id in self.packageDictionary:
             del self.packageDictionary[id]
             return {'message': "success"}, 200
-        return e.set("Package does not exist.", 400)
+        return e.noPack()
     
     def delete_all(self):
         self.packageDictionary = dict()

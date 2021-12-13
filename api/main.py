@@ -68,9 +68,9 @@ def rate_by_ID(id, pak = None):
         try:
             pak = pacs.packageDictionary[id]
         except:
-            return e.malformed()
+            return e.noPack()
     if pak == None:
-        return e.malformed()
+        return e.noPack()
     url = pak.data.URL
     if not url:
         return e.set("rating of package failed", 500)
@@ -82,11 +82,10 @@ def rate_by_ID(id, pak = None):
     from project1given.src.licensing import licensing
     from project1given.src.metrics import Metrics
     from project1given.src.rampup import rampup
-    repo = URL_info(url = url, token = "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")
+    repo = URL_info(url = url, token = "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")
     metric = Metrics(repo_data = repo)
     metric.runMetrics()
-    metric.json_final_obj = str(json.dumps(metric.json_final_obj, sort_keys=True, indent=4))
-    runMetrics = json.loads(metric.json_final_obj, strict=False)
+    runMetrics = metric.json_final_obj
     rateObj.RampUp = runMetrics['Ramp Up Score']
     rateObj.Correctness = runMetrics['Correctness Score']
     rateObj.BusFactor = runMetrics['Bus Factor Score']
@@ -106,13 +105,15 @@ def rate_by_ID(id, pak = None):
     # new total is:
     #  total = ((0.25*0.9 * rampup_score) + (0.15*0.9 * correctness_score) + (0.35*0.9 * bus_factor_score) + (0.25*0.9 * responsive_maintainer_score) + (0.1 * goodpinningpractice)) * license_score
     action.Action = PackageHistoryEntry.ActionEnum.RATE
-    action.PackageMetaData = pak.metadata
     from datetime import datetime
-    action.Date = datetime.now()
-    pak.history.append(action)
-    
+    action.Date = str(datetime.now())
+    pak.history.append(action.toJSON())
     pak.rating = total
     rateObj.NetScore = total
+    j = dict()
+    j["history"] = str(json.dumps(pak.history))
+    j["rating"] = str(pak.rating)
+    Firestore.update(j, pak.metadata.get_ID())
     return rateObj.toJSON(),200
 
 @app.route('/reset/', methods=['DELETE'])
@@ -183,20 +184,22 @@ def packageCreate():
         Firestore.update(pak.data.toJSON(), pak.metadata.get_ID())
     
     action.Action = PackageHistoryEntry.ActionEnum.CREATE
-    action.PackageMetaData = pak.metadata
     from datetime import datetime
-    action.Date = datetime.now()
-    pak.history.append(action)
+    action.Date = str(datetime.now())
+    pak.history.append(action.toJSON())
     if pak.data.URL != None:
         rateresponse = rate_by_ID(pak.metadata.get_ID(), pak)
         if rateresponse[1] != 200:
             Firestore.delete(pak.metadata.get_ID())
             return rateresponse
         if pak.rating < 0.5:
-            #Firestore.delete(pak.metadata.get_ID())
+            Firestore.delete(pak.metadata.get_ID())
             return e.set("package recieved bad rating", 400)
-    
     pacs.add_package(pak)
+    j = dict()
+    j["history"] = str(json.dumps(pak.history))
+    j["rating"] = str(pak.rating)
+    Firestore.update(j, pak.metadata.get_ID())
     return pak.metadata.toJSON(), 201
     
 @app.route('/package/<id>', methods=['GET', 'PUT', 'DELETE'])
@@ -216,12 +219,8 @@ def packageRetrieve(id):
         pak = pacs.packageDictionary[id]
         if not pak:
             return e.unexpected()
-        logging.warning(str(pak.metadata))
-        logging.warning(str(pak.data))
         pak.metadata = pak.metadata.get_data()
         pak.data = pak.data.get_data(pak.metadata.get_ID())
-        logging.warning(str(pak.metadata))
-        logging.warning(str(pak.data))
         return {'metadata': pak.metadata.toJSON(), 'data': pak.data.toJSON()}, 200
     return e.unexpected()
 
@@ -235,9 +234,9 @@ def packageUpdate(id):
     from Packages import Packages
     pacs = Packages()
     pacs = pacs.update()
-    pak = pacs.packageDictionary[id]
-    if not pak:
+    if not id in pacs.packageDictionary:
         return e.malformed()
+    pak = pacs.packageDictionary[id]
     if (pak.metadata.Name != jsonResponse['metadata']["Name"]) or (pak.metadata.Version != jsonResponse['metadata']["Version"]) or (pak.metadata.ID != jsonResponse['metadata']["ID"]):
         return e.malformed()
     
@@ -248,22 +247,25 @@ def packageUpdate(id):
     if(pak.data == None):
         pak.data = pak.data.set_data(prev.data.toJSON(), pak.metadata.get_ID())
         return e.malformed()
-    
+    pak.rating = prev.rating
+    pak.history = prev.history
     action.Action = PackageHistoryEntry.ActionEnum.UPDATE
-    action.PackageMetaData = pak.metadata
     from datetime import datetime
-    action.Date = datetime.now()
-    pak.history.append(action)
+    action.Date = str(datetime.now())
+    pak.history.append(action.toJSON())
     pacs.add_package(pak)#add new version
+    j = dict()
+    j["history"] = str(json.dumps(pak.history))
+    Firestore.update(j, pak.metadata.get_ID())
     return {'message': "success"}, 201
 
 def packageDelete(id):
     from Packages import Packages
     pacs = Packages()
     pacs = pacs.update()
-    Firestore.delete(id)
     if not id in pacs.packageDictionary:
-        return e.set("Package does not exist.", 400)
+        return e.noPack()
+    Firestore.delete(id)
     return pacs.delete_package(id)
 
 @app.route('/packages/', methods = ['POST'])    
@@ -308,9 +310,9 @@ def get_package_by_Name(Name):
     pacs = pacs.update()
     for id,pack in pacs.packageDictionary.items():
         if (pack.metadata.Name == Name):
-            return json.dump(pack.history, default=lambda o: o.__dict__, 
+            return json.dumps(pack.history, default=lambda o: o.__dict__, 
                 sort_keys=True, indent=4), 200
-    return e.malformed()
+    return e.noPack()
 
 def delete_package_by_Name(Name):
     from Packages import Packages
@@ -323,7 +325,7 @@ def delete_package_by_Name(Name):
             break
     if i:
         return packageDelete(i)
-    return e.set("Package does not exist.", 400)
+    return e.noPack()
 
 if __name__ == '__main__':
     app.run()

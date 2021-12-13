@@ -1,4 +1,5 @@
 from ZipUnzip import ZipUnzip
+from PackageAudit import PackageAudit
 import json
 import re
 import glob
@@ -10,6 +11,7 @@ class SemverRange(object):
                    recursive = True)
         semver_json = json.load(open(filepath[0], "r"))
         versions = list(semver_json["devDependencies"].values())
+        PackageAudit(filepath[0:-14], filepath[0:-14])
         return versions
     
     def parse_versions(self, versions):

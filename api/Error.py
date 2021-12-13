@@ -9,7 +9,8 @@ class Error(object):
         self.message = message
         self.code = code
         return {'message': message}, code
-    
+    def noPack(self):
+        return self.set("Package does not exist.", 400)
     def malformed(self):
         return self.set("Malformed request.", 400)
     def unexpected(self):

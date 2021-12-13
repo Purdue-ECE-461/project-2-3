@@ -19,15 +19,28 @@ class Package(object):
     rating = 0
     
     def toJSON(self):
-        m = str(self.metadata.toJSON())
-        d = str(self.data.toJSON())
-        h = str(json.dumps(self.history))
-        r = str(json.dumps(str(self.rating)))
-        j = str(json.dumps(m+d))
-        j = str(json.dumps(j+r+h))
+        j = dict()
+        j["metadata"] = str(self.metadata.toJSON())
+        j["data"] = str(self.data.toJSON())
+        j["history"] = self.history
+        j["rating"] = str(self.rating)
         return json.dumps(j, default=lambda o: o.__dict__, 
             sort_keys=True, indent=4)
-
+        
+    def get_self(self, ID):
+        import firestore as Firestore
+        packdict = Firestore.read(ID)
+        try:
+            self.rating = packdict["rating"]
+        except:
+            self.rating = 0
+        try:
+            self.history = json.loads(packdict["history"])
+        except:
+            self.history = []
+        self.metadata = self.metadata.get_data()
+        self.data = self.data.get_data(ID)
+        return self
     def __eq__(self, obj):
         if(obj == None):
             if ((not self) or self.metadata == None):

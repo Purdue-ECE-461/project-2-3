@@ -25,7 +25,7 @@
     <i class="glyphicon glyphicon-edit"></i>
     Edit package_module
   </a>
-  <a href="/package_modules/{{package_module.id}}/delete" class="btn btn-danger btn-sm">
+  <a href="/package_modules/{{package_module.id}}/delete" class="btn btn-danger btn-sm" style="background-color: #c34a47;">
     <i class="glyphicon glyphicon-trash"></i>
     Delete package_module
   </a>
@@ -35,16 +35,16 @@
   {# [START package_module_image] #}
   <div class="media-left">
     {% if package_module.imageUrl %}
-      <img class="package_module-image" src="{{package_module.imageUrl}}">
+      <img class="package_module-image" alt="image downloaded from package" src="{{package_module.imageUrl}}">
     {% else %}
-      <img class="package_module-image" src="https://placekitten.com/g/128/192">
+      <img class="package_module-image" alt="kitten" src="https://placekitten.com/g/128/192">
     {% endif %}
   </div>
   {# [END package_module_image] #}
   <div class="media-body">
     <h4 class="package_module-name">
       {{package_module.name}}
-      <small>{{package_module.publishedDate}}</small>
+      <small style="color: #717171;">{{package_module.publishedDate}}</small>
     </h4>
     <h5 class="package_module-user">By {{package_module.user|default('Unknown', True)}}</h5>
     <p class="package_module-description">{{package_module.description}}</p>

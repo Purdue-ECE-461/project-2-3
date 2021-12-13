@@ -1,24 +1,31 @@
+import json
 class PackageHistoryEntry(object):
     import User
-    import MetaData
-    import PackageData
     from enum import Enum
     
     ActionEnum = Enum('Action', 'CREATE UPDATE DOWNLOAD RATE')
     
-    User = User
+    User = None
     Date = None
-    PackageMetadata = MetaData
     Action = ActionEnum.CREATE
+    
     def get_data(self):
-        return self
+        j = dict()
+        j["User"] = self.User
+        j["Date"] = self.Date
+        j["Action"] = str(self.Action)
+        return j
+    
     def set_data(self, data):
         self.User = data["User"]
         self.Date = data["Date"]
-        self.PackageMetadata = data["PackageMetadata"]
         self.Action = data["Action"]
         return self
     
+    def get_self(self, ID):
+        import firestore as Firestore
+        packdict = Firestore.read(ID)
+        return json.loads(packdict["history"])
+        
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, 
-            sort_keys=True, indent=4)
+        return json.dumps(self.get_data(), sort_keys=True, indent=4)

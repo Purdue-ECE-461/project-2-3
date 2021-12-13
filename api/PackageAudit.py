@@ -10,7 +10,7 @@ class PackageAudit (object) :
         self.destination_folder = _destination_folder
 
     def audit_run (self) :
-        os.system("cd " + self.package_name + " & npm audit --json > auditReport.json")
+        os.system("cd " + self.package_name + " & npm audit --json > " + self.destination_folder + "auditReport.json")
 
 if __name__ == "__main__" :
     test = PackageAudit("mocha-master", "../")
