@@ -99,6 +99,7 @@ def delete_all_package_modules():
 
 if __name__ == "__main__" :
     zz = ZipUnzip()
+    os.remove("api/service_account.txt")
     encoded = zz.base64Encode("service_account.json")
     with open("api/service_account.txt", 'w+b') as file:
         file.write(encoded)
