@@ -1,0 +1,36 @@
+name: Pyflakes
+
+on: [push]
+    
+jobs: 
+  build:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+       
+    - name: Installing dependencies
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LOG_LEVEL: 1
+        LOG_FILE: log_file.log
+      run: |
+        chmod +x ./run
+        ./run install
+        python -m pip install --upgrade pip
+        pip install --upgrade pyflakes
+        
+    - name: Analyzing code with Pyflakes
+      run: |
+        find ./api -name '*.py' -exec pyflakes {} \;
+        find ./authenticating-users -name '*.py' -exec pyflakes {} \;
+        find ./background -name '*.py' -exec pyflakes {} \;
+        find ./optional-kubernetes-engine -name '*.py' -exec pyflakes {} \;
+        find ./package_moduleshelf -name '*.py' -exec pyflakes {} \;
+        find ./sessions -name '*.py' -exec pyflakes {} \;

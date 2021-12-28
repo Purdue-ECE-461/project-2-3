@@ -1,0 +1,18 @@
+on: push
+
+jobs:
+  setup-deploy:
+    name: Setup
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: deploy
+        id: deploy
+        uses: google-github-actions/deploy-appengine@main
+        with:
+          credentials: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          version: v1
+          deliverables: 'package_moduleshelf/app.yaml api/apiAppEngine.yaml'

@@ -1,0 +1,33 @@
+name: Pylint
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LOG_LEVEL: 1
+        LOG_FILE: log_file.log
+      run: |
+        chmod +x ./run
+        ./run install
+        python -m pip install --upgrade pip
+        pip install pylint
+    - name: Analysing the code with pylint
+      run: |
+        find ./api -name '*.py' -exec pylint {} \;
+        find ./authenticating-users -name '*.py' -exec pylint {} \;
+        find ./background -name '*.py' -exec pylint {} \;
+        find ./optional-kubernetes-engine -name '*.py' -exec pylint {} \;
+        find ./package_moduleshelf -name '*.py' -exec pylint {} \;
+        find ./sessions -name '*.py' -exec pylint {} \;

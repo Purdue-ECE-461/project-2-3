@@ -1,0 +1,3 @@
+runtime: python38
+service: api
+instance_class: F4_HIGHMEM

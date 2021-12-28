@@ -1,0 +1,6 @@
+pandas
+requests
+pytest
+GitPython
+pytest-json-report
+coverage

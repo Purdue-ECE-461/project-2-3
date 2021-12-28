@@ -1,0 +1,37 @@
+name: Bandit
+
+on: [push]
+
+jobs:
+  build: 
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+       
+    - name: Installing dependencies
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LOG_LEVEL: 1
+        LOG_FILE: log_file.log
+      run: |
+        chmod +x ./run
+        ./run install
+        python -m pip install --upgrade pip
+        pip install --upgrade bandit
+        
+    - name: Analyzing code with Bandit
+      run: |
+        chmod +x ./run
+        find ./api -name '*.py' -exec bandit -q -r {} \;
+        find ./authenticating-users -name '*.py' -exec bandit -q -r {} \;
+        find ./background -name '*.py' -exec bandit -q -r {} \;
+        find ./optional-kubernetes-engine -name '*.py' -exec bandit -q -r {} \;
+        find ./package_moduleshelf -name '*.py' -exec bandit -q -r {} \;
+        find ./sessions -name '*.py' -exec bandit -q -r {} \;
